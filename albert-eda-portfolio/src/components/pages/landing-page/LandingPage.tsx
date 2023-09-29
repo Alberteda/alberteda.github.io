@@ -1,12 +1,12 @@
-
+import { Button } from "@mui/material"
 
 function LandingPage() {
 
   return (
     <>
-      <div>
+      <Button variant="contained">
         Portfolio
-      </div>
+      </Button>
       <p className="read-the-docs">
         Coming soon
       </p>
