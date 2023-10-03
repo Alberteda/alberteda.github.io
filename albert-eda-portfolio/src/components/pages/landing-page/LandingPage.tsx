@@ -1,15 +1,18 @@
-import { Button } from "@mui/material"
+import { Typography } from "@mui/material"
 
-function LandingPage() {
+export const LandingPage = () => {
 
   return (
     <>
-      <Button variant="contained">
-        Portfolio
-      </Button>
-      <p className="read-the-docs">
-        Coming soon
-      </p>
+      <Typography variant="h1">
+        Hey, I'm Albert
+      </Typography>
+      <Typography>
+        I'm a full-stack software engineer at OBSIDI. Recently, I've been a high contributor to the developement of the OBSIDI platform.
+      </Typography>
+      <Typography>
+        In my free time I run an indie Record Label, I like to explore cities -local and afar, play soccer, take photos on film, and play a heroic amount of video games.
+      </Typography>
     </>
   )
 }
