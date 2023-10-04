@@ -1,10 +1,10 @@
 import './App.css'
-import { MainContainer }  from './components/main-container/MainContainer'
+import { LandingPage } from './components/pages/landing-page/LandingPage'
 
 function App() {
 
   return (
-    <MainContainer />
+    <LandingPage />
   )
 }
 

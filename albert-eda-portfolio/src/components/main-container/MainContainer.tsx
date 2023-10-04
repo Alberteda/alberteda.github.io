@@ -1,11 +1,13 @@
-import { LandingPage } from "../pages/landing-page/LandingPage"
 import { StyledPageWrapper } from "./styled"
 
-export const MainContainer = () => {
+interface MainContainerProps {
+    children: React.ReactNode
+}
+export const MainContainer = ({ children }: MainContainerProps) => {
     
     return (
-        <StyledPageWrapper>
-            <LandingPage />
+        <StyledPageWrapper bgcolor="lightblue">
+            {children}
         </StyledPageWrapper>
     )
 }
