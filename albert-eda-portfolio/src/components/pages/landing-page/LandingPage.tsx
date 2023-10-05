@@ -1,30 +1,41 @@
-import { Typography, Box } from "@mui/material"
+import { Box, Typography } from "@mui/material"
+import { StyledBox, StyledImageWrapper, StyledImage } from "./styled"
+import ProfilePicture from './profile-pic.jpg'
 
 export const LandingPage = () => {
 
   return (
-    <Box display={"grid"} gridTemplateColumns={"1fr 2fr"} sx={{ minHeight: "100vh" }} gap={'3rem'} padding={"20rem 8rem"}>
-      <Box bgcolor={"lightblue"} textAlign={"left"}>
-        <Typography variant="h1">
-          Hey, I'm Albert
-        </Typography>
-        <Typography>
-          I'm a full-stack software engineer at OBSIDI. Recently, I've been a high contributor to the developement of the OBSIDI platform.
-        </Typography>
-        <Typography>
-          In my free time I run an indie Record Label, I like to explore cities -local and afar, play soccer, take photos on film, and play a heroic amount of video games.
-        </Typography>
+  <Box padding="1rem 8.063rem">
+      <Box
+        display="flex"
+        flexDirection="column"
+        mb="5rem"
+        gap="3rem"
+      >
+        <Box textAlign={"left"}>
+          <Typography variant="subtitle1" fontWeight={"800"} color={"white"}>
+            Albert Eda
+          </Typography>
+        </Box>
+        <Box textAlign={"left"}>
+          <Typography variant="h2" fontWeight={"700"} color={"white"} mb={"0.5rem"}>
+            Software Engineer
+          </Typography>
+          <Typography variant="body1" color={"white"}>
+            Ottawa, ON, Canada
+          </Typography>
+        </Box>
       </Box>
-      <Box bgcolor={"lightblue"}>
-        <Typography variant="h1">
-          Hey, I'm Albert
-        </Typography>
-        <Typography>
-          I'm a full-stack software engineer at OBSIDI. Recently, I've been a high contributor to the developement of the OBSIDI platform.
-        </Typography>
-        <Typography>
-          In my free time I run an indie Record Label, I like to explore cities -local and afar, play soccer, take photos on film, and play a heroic amount of video games.
-        </Typography>
+      <Box display={"grid"} gridTemplateColumns={"1fr 2fr"} gap={'3rem'} margin={"auto"}>
+        <Box>
+          <StyledImageWrapper>
+            <StyledImage src={ProfilePicture} alt="profile-picture"/>
+          </StyledImageWrapper>
+        
+        </Box>
+        <StyledBox>
+          
+        </StyledBox>
       </Box>
     </Box>
     
