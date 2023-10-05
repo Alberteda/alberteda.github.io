@@ -1,4 +1,4 @@
-import { Box } from "@mui/material"
+import { Box, Button } from "@mui/material"
 import styled from "styled-components"
 
 export const StyledBox = styled(Box)`
@@ -39,4 +39,9 @@ export const StyledFeed = styled(Box)`
     text-align: center;
     border-radius: 20px;
     width: 60.875rem;
+`
+
+export const StyledResumeButton = styled(Button)`
+    width: 16.25rem;
+    height: 3.25rem;
 `
