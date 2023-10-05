@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material"
 import { StyledImageWrapper, StyledImage, StyledNavBar, StyledFeed, StyledResumeButton } from "./styled"
 import ProfilePicture from './profile-pic.jpg'
+import DownloadForOfflineOutlinedIcon from '@mui/icons-material/DownloadForOfflineOutlined';
 
 export const LandingPage = () => {
 
@@ -46,6 +47,12 @@ export const LandingPage = () => {
                 <Typography variant="body1" color="white" fontWeight={"700"}>
                   Resume
                 </Typography>
+                <DownloadForOfflineOutlinedIcon
+                  sx={{
+                    color: '#F4D03F',
+                    marginLeft: "0.5rem",
+                  }}
+                 />
               </StyledResumeButton>
         </Box>
         <Box display={"grid"} gridTemplateRows={"0.5fr 1fr"} gap="5rem">
