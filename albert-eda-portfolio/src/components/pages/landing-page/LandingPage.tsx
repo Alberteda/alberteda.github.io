@@ -39,7 +39,6 @@ export const LandingPage = () => {
                       border: "4px solid #F4D03F", 
                       color: 'linear-gradient(132deg, #F4D03F 0%, #16A085 100%)',
                       '&:hover': {
-                        backgroundColor: "#F76B1C",
                         border: "4px solid #EE5100"
                       }
                     }}
