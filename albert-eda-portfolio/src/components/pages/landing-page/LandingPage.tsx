@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material"
-import { StyledImageWrapper, StyledImage, StyledNavBar, StyledFeed, StyledResumeButton } from "./styled"
+import { StyledImageWrapper, StyledImage, StyledNavBar, StyledResumeButton } from "./styled"
 import ProfilePicture from './profile-pic.jpg'
 import DownloadForOfflineOutlinedIcon from '@mui/icons-material/DownloadForOfflineOutlined';
 
@@ -27,7 +27,7 @@ export const LandingPage = () => {
           </Typography>
         </Box>
       </Box>
-      <Box display="flex" gap="20rem">
+      <Box display="flex" gap="30rem">
         <Box display="flex" flexDirection="column" gap="2rem">
             <StyledImageWrapper>
               <StyledImage src={ProfilePicture} alt="profile-picture"/>
@@ -54,13 +54,25 @@ export const LandingPage = () => {
                  />
               </StyledResumeButton>
         </Box>
-        <Box display={"grid"} gridTemplateRows={"0.5fr 1fr"} gap="5rem">
+        <Box display={"grid"} gridTemplateRows={"1fr"} gap="2rem">
           <StyledNavBar justifySelf={"right"}>
 
           </StyledNavBar>
-          <StyledFeed>
-            okko
-          </StyledFeed>
+          <Box alignItems={"center"}>
+            <Typography variant="h1" fontWeight={"700"} color={"white"}>
+              Hey, I'm Albert
+            </Typography>
+          </Box>
+          <Box textAlign={"left"}>
+            <Typography variant="subtitle1" fontWeight={"700"} color={"white"}>
+              I'm a Software Engineer at OBSIDI. Over the years, I have made substantial contributions to the developement of the OBSIDI platform as a Full-Stack Software Engineer.
+            </Typography>
+          </Box>
+          <Box textAlign={"left"}>
+            <Typography variant="subtitle1" fontWeight={"700"} color={"white"}>
+              In my free time I run an entertainment studio called Tuff Records, based in Ottawa. I like to make music, take photos on film, and play video games.
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </Box>
