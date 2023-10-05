@@ -5,6 +5,8 @@ export const StyledBox = styled(Box)`
     background-color: #8AAAE5;
     text-align: center;
     border-radius: 20px;
+    width: 100%;
+    height: 100%;
 `
 
 export const StyledImageWrapper = styled(Box)`
@@ -23,4 +25,18 @@ export const StyledImage = styled.img`
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
+`
+
+export const StyledNavBar = styled(Box)`
+    width: 32.875rem;
+    height: 5rem;
+    background-color: #8AAAE5;
+    border-radius: 20px;
+`
+
+export const StyledFeed = styled(Box)`
+    background-color: #8AAAE5;
+    text-align: center;
+    border-radius: 20px;
+    width: 60.875rem;
 `

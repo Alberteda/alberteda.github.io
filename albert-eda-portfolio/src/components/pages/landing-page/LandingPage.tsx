@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material"
-import { StyledBox, StyledImageWrapper, StyledImage } from "./styled"
+import { StyledImageWrapper, StyledImage, StyledNavBar, StyledFeed } from "./styled"
 import ProfilePicture from './profile-pic.jpg'
 
 export const LandingPage = () => {
@@ -26,16 +26,20 @@ export const LandingPage = () => {
           </Typography>
         </Box>
       </Box>
-      <Box display={"grid"} gridTemplateColumns={"1fr 2fr"} gap={'3rem'} margin={"auto"}>
+      <Box display="flex" gap="20rem">
         <Box>
-          <StyledImageWrapper>
-            <StyledImage src={ProfilePicture} alt="profile-picture"/>
-          </StyledImageWrapper>
-        
+            <StyledImageWrapper>
+              <StyledImage src={ProfilePicture} alt="profile-picture"/>
+            </StyledImageWrapper>
         </Box>
-        <StyledBox>
-          
-        </StyledBox>
+        <Box display={"grid"} gridTemplateRows={"0.5fr 1fr"} gap="5rem">
+          <StyledNavBar justifySelf={"right"}>
+
+          </StyledNavBar>
+          <StyledFeed>
+            okko
+          </StyledFeed>
+        </Box>
       </Box>
     </Box>
     
