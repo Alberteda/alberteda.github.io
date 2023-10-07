@@ -1,8 +1,10 @@
 import { Box, Typography, Button } from "@mui/material"
-import { StyledImageWrapper, StyledImage, StyledBar1, StyledBar2, StyledBar3, StyledResumeButton } from "./styled"
-import ProfilePicture from './profile-pic.jpg'
+import { StyledImageWrapper, StyledImage, StyledBar1, StyledBar2, StyledBar3, StyledResumeButton, StyledSocials } from "./styled"
 import DownloadForOfflineOutlinedIcon from '@mui/icons-material/DownloadForOfflineOutlined'
-
+import ProfilePicture from './profile-pic.jpg'
+import Linkedin from '../../../assets/linkedin.svg'
+import GitHub from '../../../assets/github.svg'
+import Mail from '../../../assets/mail.svg'
 export const LandingPage = () => {
 
   return (
@@ -59,6 +61,11 @@ export const LandingPage = () => {
                   Resume
                 </Typography>
               </StyledResumeButton>
+              <Box display="flex" gap="1rem" alignSelf="center">
+              <StyledSocials src={Linkedin} />
+              <StyledSocials src={GitHub} />
+              <StyledSocials src={Mail} />
+              </Box>
         </Box>
         <Box display={"grid"} gridTemplateRows={"1fr"} gap="2rem">
           <Box display="grid" gridTemplateColumns="column"  justifySelf="right" gap="0.5rem">

@@ -27,6 +27,14 @@ export const StyledImage = styled.img`
     border-radius: 50%;
 `
 
+export const StyledSocials = styled.img`
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+`
+
 export const StyledBar1 = styled(Box)`
     width: 15rem;
     height: 0.4rem;
