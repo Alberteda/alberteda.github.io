@@ -14,7 +14,7 @@ export const LandingPage = () => {
         gap="3rem"
       >
         <Box textAlign={"left"}>
-          <Typography variant="subtitle1" fontWeight={"800"} color={"white"}>
+          <Typography variant="h5" fontWeight={"bolder"} color={"white"}>
             Albert Eda
           </Typography>
         </Box>
