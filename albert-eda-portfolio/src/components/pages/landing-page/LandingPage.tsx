@@ -5,10 +5,12 @@ import ProfilePicture from './profile-pic.jpg'
 import Linkedin from '../../../assets/linkedin.svg'
 import GitHub from '../../../assets/github.svg'
 import Mail from '../../../assets/mail.svg'
+
 export const LandingPage = () => {
 
+
   return (
-  <Box padding="1rem 20rem">
+    <Box padding="1rem 20rem">
       <Box
         display="flex"
         flexDirection="column"
@@ -62,9 +64,15 @@ export const LandingPage = () => {
                 </Typography>
               </StyledResumeButton>
               <Box display="flex" gap="1rem" alignSelf="center">
-              <StyledSocials src={Linkedin} />
-              <StyledSocials src={GitHub} />
-              <StyledSocials src={Mail} />
+              <a href="https://www.linkedin.com/in/alberteda" target="_blank" rel="noopener noreferrer">
+                <StyledSocials src={Linkedin} />
+              </a>
+              <a href="https://github.com/alberteda" target="_blank" rel="noopener noreferrer">
+                <StyledSocials src={GitHub} />
+              </a>
+              <a href="mailto:alberteda32@gmail.com" target="_blank" rel="noopener noreferrer">
+                <StyledSocials src={Mail} />
+              </a>
               </Box>
         </Box>
         <Box display={"grid"} gridTemplateRows={"1fr"} gap="2rem">
