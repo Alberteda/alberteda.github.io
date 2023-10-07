@@ -1,7 +1,7 @@
-import { Box, Typography } from "@mui/material"
+import { Box, Typography, Button } from "@mui/material"
 import { StyledImageWrapper, StyledImage, StyledNavBar, StyledResumeButton } from "./styled"
 import ProfilePicture from './profile-pic.jpg'
-import DownloadForOfflineOutlinedIcon from '@mui/icons-material/DownloadForOfflineOutlined';
+import DownloadForOfflineOutlinedIcon from '@mui/icons-material/DownloadForOfflineOutlined'
 
 export const LandingPage = () => {
 
@@ -71,12 +71,23 @@ export const LandingPage = () => {
           </Box>
           <Box textAlign={"left"}>
             <Typography variant="h6" color={"white"}>
-              I'm a Software Engineer at OBSIDI. Over the years, I have made substantial contributions to the developement of the OBSIDI platform as a Full-Stack Software Engineer.
+              I'm a Software Engineer at 
+                <Button 
+                  sx={{ 
+                        borderRadius: "10px", 
+                        border: "2px solid #BB86FC",
+                        marginLeft: "0.5rem"
+                      }}>
+                        <Typography variant="body1" color="#BB86FC" fontWeight={"700"}>
+                          OBSIDI
+                        </Typography>
+                </Button> . 
+              Over the years, I have made substantial contributions to the developement of the OBSIDI platform.
             </Typography>
           </Box>
           <Box textAlign={"left"}>
             <Typography variant="h6" color={"white"}>
-              In my free time I run an entertainment studio called Tuff Records, based in Ottawa. I like to make music, take photos on film, and play video games.
+              In my free time I run an entertainment studio, based in Ottawa. I like to make music, take photos on film, and play video games.
             </Typography>
           </Box>
         </Box>
