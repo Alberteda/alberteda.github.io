@@ -6,7 +6,7 @@ import DownloadForOfflineOutlinedIcon from '@mui/icons-material/DownloadForOffli
 export const LandingPage = () => {
 
   return (
-  <Box padding="1rem 8.063rem">
+  <Box padding="1rem 20rem">
       <Box
         display="flex"
         flexDirection="column"
@@ -33,6 +33,18 @@ export const LandingPage = () => {
               <StyledImage src={ProfilePicture} alt="profile-picture"/>
             </StyledImageWrapper>
               <StyledResumeButton 
+                endIcon={
+                  <DownloadForOfflineOutlinedIcon
+                    sx={{
+                      color: '#F4D03F',
+                      width: "1.5rem",
+                      height: "1.5rem",
+                      '&:hover': {
+                        color: "#EE5100",
+                      }
+                    }}
+                  />
+                }
                 variant="outlined" 
                 sx={{ 
                       borderRadius: "20px", 
@@ -46,12 +58,6 @@ export const LandingPage = () => {
                 <Typography variant="body1" color="white" fontWeight={"700"}>
                   Resume
                 </Typography>
-                <DownloadForOfflineOutlinedIcon
-                  sx={{
-                    color: '#F4D03F',
-                    marginLeft: "0.5rem",
-                  }}
-                 />
               </StyledResumeButton>
         </Box>
         <Box display={"grid"} gridTemplateRows={"1fr"} gap="2rem">
