@@ -27,7 +27,7 @@ export const LandingPage = () => {
           </Typography>
         </Box>
       </Box>
-      <Box display="flex" gap="30rem">
+      <Box display="flex" gap="20rem">
         <Box display="flex" flexDirection="column" gap="2rem">
             <StyledImageWrapper>
               <StyledImage src={ProfilePicture} alt="profile-picture"/>
@@ -70,12 +70,12 @@ export const LandingPage = () => {
             </Typography>
           </Box>
           <Box textAlign={"left"}>
-            <Typography variant="subtitle1" fontWeight={"700"} color={"white"}>
+            <Typography variant="h6" color={"white"}>
               I'm a Software Engineer at OBSIDI. Over the years, I have made substantial contributions to the developement of the OBSIDI platform as a Full-Stack Software Engineer.
             </Typography>
           </Box>
           <Box textAlign={"left"}>
-            <Typography variant="subtitle1" fontWeight={"700"} color={"white"}>
+            <Typography variant="h6" color={"white"}>
               In my free time I run an entertainment studio called Tuff Records, based in Ottawa. I like to make music, take photos on film, and play video games.
             </Typography>
           </Box>
