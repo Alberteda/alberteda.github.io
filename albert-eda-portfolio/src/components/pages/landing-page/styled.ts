@@ -35,28 +35,11 @@ export const StyledSocials = styled.img`
     border-radius: 50%;
 `
 
-export const StyledDivider1 = styled(Divider)`
-    width: 15rem;
-    height: 0.4rem;
+export const StyledDivider = styled(Divider)`
+    width: 80%;
+    height: 0.1rem;
     background-color: #8AAAE5;
     border-radius: 20px;
-    justify-self: right;
-`
-
-export const StyledDivider2 = styled(Divider)`
-    width: 21rem;
-    height: 0.4rem;
-    background-color: #8AAAE5;
-    border-radius: 20px;
-    justify-self: right;
-`
-
-export const StyledDivider3 = styled(Divider)`
-    width: 32rem;
-    height: 0.4rem;
-    background-color: #8AAAE5;
-    border-radius: 20px;
-    justify-self: right;
 `
 
 export const StyledFeed = styled(Box)`

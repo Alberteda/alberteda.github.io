@@ -1,5 +1,5 @@
 import { Box, Typography, Button } from "@mui/material"
-import { StyledImageWrapper, StyledImage, StyledDivider1, StyledDivider2, StyledDivider3, StyledResumeButton, StyledSocials } from "./styled"
+import { StyledImageWrapper, StyledImage, StyledDivider, StyledResumeButton, StyledSocials } from "./styled"
 import DownloadForOfflineOutlinedIcon from '@mui/icons-material/DownloadForOfflineOutlined'
 import ProfilePicture from './profile-pic.jpg'
 import Linkedin from '../../../assets/linkedin.svg'
@@ -75,17 +75,13 @@ export const LandingPage = () => {
               </a>
               </Box>
         </Box>
-        <Box display="flex" flexDirection="column" gap="2rem">
-          <Box display="flex" flexDirection="column" alignItems="flex-end"  justifySelf="right" gap="0.5rem">
-              <StyledDivider1></StyledDivider1>
-              <StyledDivider2></StyledDivider2>
-              <StyledDivider3></StyledDivider3>
-          </Box>
+        <Box display="flex" flexDirection="column" gap="2rem" justifyContent="center">
           <Box display={"grid"} gridTemplateRows={"1fr"} gap="2rem">
-            <Box textAlign={"left"}>
+            <Box textAlign={"center"}>
               <Typography variant="h2" fontWeight={"700"} color={"white"}>
                 Hey, I'm Albert
               </Typography>
+              <StyledDivider />
             </Box>
             <Box textAlign={"left"}>
               <Typography variant="h6" color={"white"}>
