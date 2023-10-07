@@ -27,11 +27,28 @@ export const StyledImage = styled.img`
     border-radius: 50%;
 `
 
-export const StyledNavBar = styled(Box)`
-    width: 32.875rem;
-    height: 5rem;
+export const StyledBar1 = styled(Box)`
+    width: 15rem;
+    height: 0.4rem;
     background-color: #8AAAE5;
     border-radius: 20px;
+    justify-self: right;
+`
+
+export const StyledBar2 = styled(Box)`
+    width: 21rem;
+    height: 0.4rem;
+    background-color: #8AAAE5;
+    border-radius: 20px;
+    justify-self: right;
+`
+
+export const StyledBar3 = styled(Box)`
+    width: 32rem;
+    height: 0.4rem;
+    background-color: #8AAAE5;
+    border-radius: 20px;
+    justify-self: right;
 `
 
 export const StyledFeed = styled(Box)`

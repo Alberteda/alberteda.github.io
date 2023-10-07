@@ -1,5 +1,5 @@
 import { Box, Typography, Button } from "@mui/material"
-import { StyledImageWrapper, StyledImage, StyledNavBar, StyledResumeButton } from "./styled"
+import { StyledImageWrapper, StyledImage, StyledBar1, StyledBar2, StyledBar3, StyledResumeButton } from "./styled"
 import ProfilePicture from './profile-pic.jpg'
 import DownloadForOfflineOutlinedIcon from '@mui/icons-material/DownloadForOfflineOutlined'
 
@@ -61,10 +61,13 @@ export const LandingPage = () => {
               </StyledResumeButton>
         </Box>
         <Box display={"grid"} gridTemplateRows={"1fr"} gap="2rem">
-          <StyledNavBar justifySelf={"right"}>
+          <Box display="grid" gridTemplateColumns="column"  justifySelf="right" gap="0.5rem">
+            <StyledBar1></StyledBar1>
+            <StyledBar2></StyledBar2>
+            <StyledBar3></StyledBar3>
+          </Box>
 
-          </StyledNavBar>
-          <Box alignItems={"center"}>
+          <Box textAlign={"left"}>
             <Typography variant="h1" fontWeight={"700"} color={"white"}>
               Hey, I'm Albert
             </Typography>
@@ -72,7 +75,10 @@ export const LandingPage = () => {
           <Box textAlign={"left"}>
             <Typography variant="h6" color={"white"}>
               I'm a Software Engineer at 
-                <Button 
+                <Button
+                  href="https://app.obsidi.com/"
+                  target="_blank"
+                  rel="noopener noreferrer" // security: protects the processing of opening a new tab, disabling the windows opener and referer properties
                   sx={{ 
                         borderRadius: "10px", 
                         border: "2px solid #BB86FC",
@@ -82,7 +88,7 @@ export const LandingPage = () => {
                           OBSIDI
                         </Typography>
                 </Button> . 
-              Over the years, I have made substantial contributions to the developement of the OBSIDI platform.
+              And I have made substantial contributions to the developement of the <span style={{ color: "#BB86FC", fontWeight: "700" }}>OBSIDI</span> platform.
             </Typography>
           </Box>
           <Box textAlign={"left"}>
