@@ -74,6 +74,11 @@ export const LandingPage = () => {
                 <StyledSocials src={Mail} />
               </a>
               </Box>
+              <Box>
+                <Typography variant="button" color="white" fontWeight={"700"}>
+                  Albert Eda 2023 ©
+                </Typography>
+              </Box>
         </Box>
         <Box display="flex" flexDirection="column" gap="2rem" justifyContent="center">
           <Box display={"grid"} gridTemplateRows={"1fr"} gap="2rem">
