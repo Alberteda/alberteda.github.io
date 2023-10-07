@@ -68,7 +68,7 @@ export const LandingPage = () => {
           </Box>
 
           <Box textAlign={"left"}>
-            <Typography variant="h1" fontWeight={"700"} color={"white"}>
+            <Typography variant="h2" fontWeight={"700"} color={"white"}>
               Hey, I'm Albert
             </Typography>
           </Box>
