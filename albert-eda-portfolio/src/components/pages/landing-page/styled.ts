@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material"
+import { Box, Button, Divider } from "@mui/material"
 import styled from "styled-components"
 
 export const StyledBox = styled(Box)`
@@ -35,7 +35,7 @@ export const StyledSocials = styled.img`
     border-radius: 50%;
 `
 
-export const StyledBar1 = styled(Box)`
+export const StyledDivider1 = styled(Divider)`
     width: 15rem;
     height: 0.4rem;
     background-color: #8AAAE5;
@@ -43,7 +43,7 @@ export const StyledBar1 = styled(Box)`
     justify-self: right;
 `
 
-export const StyledBar2 = styled(Box)`
+export const StyledDivider2 = styled(Divider)`
     width: 21rem;
     height: 0.4rem;
     background-color: #8AAAE5;
@@ -51,7 +51,7 @@ export const StyledBar2 = styled(Box)`
     justify-self: right;
 `
 
-export const StyledBar3 = styled(Box)`
+export const StyledDivider3 = styled(Divider)`
     width: 32rem;
     height: 0.4rem;
     background-color: #8AAAE5;
