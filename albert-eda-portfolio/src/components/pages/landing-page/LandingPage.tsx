@@ -81,7 +81,7 @@ export const LandingPage = () => {
               <Typography variant="h2" fontWeight={"700"} color={"white"}>
                 Hey, I'm Albert
               </Typography>
-              <StyledDivider />
+              <StyledDivider style={{ marginTop: "0.5rem" }} />
             </Box>
             <Box textAlign={"left"}>
               <Typography variant="h6" color={"white"}>
