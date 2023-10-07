@@ -75,41 +75,42 @@ export const LandingPage = () => {
               </a>
               </Box>
         </Box>
-        <Box display={"grid"} gridTemplateRows={"1fr"} gap="2rem">
+        <Box display="flex" flexDirection="column" gap="2rem">
           <Box display="flex" flexDirection="column" alignItems="flex-end"  justifySelf="right" gap="0.5rem">
-            <StyledDivider1></StyledDivider1>
-            <StyledDivider2></StyledDivider2>
-            <StyledDivider3></StyledDivider3>
+              <StyledDivider1></StyledDivider1>
+              <StyledDivider2></StyledDivider2>
+              <StyledDivider3></StyledDivider3>
           </Box>
-
-          <Box textAlign={"left"}>
-            <Typography variant="h2" fontWeight={"700"} color={"white"}>
-              Hey, I'm Albert
-            </Typography>
-          </Box>
-          <Box textAlign={"left"}>
-            <Typography variant="h6" color={"white"}>
-              I'm a Software Engineer at 
-                <Button
-                  href="https://app.obsidi.com/"
-                  target="_blank"
-                  rel="noopener noreferrer" // security: protects the processing of opening a new tab, disabling the windows opener and referer properties
-                  sx={{ 
-                        borderRadius: "10px", 
-                        border: "2px solid #BB86FC",
-                        marginLeft: "0.5rem"
-                      }}>
-                        <Typography variant="body1" color="#BB86FC" fontWeight={"700"}>
-                          OBSIDI
-                        </Typography>
-                </Button> . 
-              And I have made substantial contributions to the developement of the <span style={{ color: "#BB86FC", fontWeight: "700" }}>OBSIDI</span> platform.
-            </Typography>
-          </Box>
-          <Box textAlign={"left"}>
-            <Typography variant="h6" color={"white"}>
-              In my free time I run an entertainment studio, based in Ottawa. I like to make music, take photos on film, and play video games.
-            </Typography>
+          <Box display={"grid"} gridTemplateRows={"1fr"} gap="2rem">
+            <Box textAlign={"left"}>
+              <Typography variant="h2" fontWeight={"700"} color={"white"}>
+                Hey, I'm Albert
+              </Typography>
+            </Box>
+            <Box textAlign={"left"}>
+              <Typography variant="h6" color={"white"}>
+                I'm a Software Engineer at 
+                  <Button
+                    href="https://app.obsidi.com/"
+                    target="_blank"
+                    rel="noopener noreferrer" // security: protects the processing of opening a new tab, disabling the windows opener and referer properties
+                    sx={{ 
+                          borderRadius: "10px", 
+                          border: "2px solid #BB86FC",
+                          marginLeft: "0.5rem"
+                        }}>
+                          <Typography variant="body1" color="#BB86FC" fontWeight={"700"}>
+                            OBSIDI
+                          </Typography>
+                  </Button> . 
+                And I have made substantial contributions to the developement of the <span style={{ color: "#BB86FC", fontWeight: "700" }}>OBSIDI</span> platform.
+              </Typography>
+            </Box>
+            <Box textAlign={"left"}>
+              <Typography variant="h6" color={"white"}>
+                In my free time I run an entertainment studio, based in Ottawa. I like to make music, take photos on film, and play video games.
+              </Typography>
+            </Box>
           </Box>
         </Box>
       </Box>
