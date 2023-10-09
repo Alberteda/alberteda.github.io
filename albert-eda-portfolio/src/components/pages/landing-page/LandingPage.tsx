@@ -1,6 +1,6 @@
 import { Box, Typography, Button } from "@mui/material"
 import { StyledImageWrapper, StyledImage, StyledDivider, StyledResumeButton, StyledSocials } from "./styled"
-import DownloadForOfflineOutlinedIcon from '@mui/icons-material/DownloadForOfflineOutlined'
+import ConstructionIcon from '@mui/icons-material/Construction'
 import ProfilePicture from './profile-pic.jpg'
 import Linkedin from '../../../assets/linkedin.svg'
 import GitHub from '../../../assets/github.svg'
@@ -38,7 +38,7 @@ export const LandingPage = () => {
             </StyledImageWrapper>
               <StyledResumeButton 
                 endIcon={
-                  <DownloadForOfflineOutlinedIcon
+                  <ConstructionIcon
                     sx={{
                       color: '#F4D03F',
                       width: "1.5rem",
@@ -60,7 +60,7 @@ export const LandingPage = () => {
                     }}
               >
                 <Typography variant="body1" color="white" fontWeight={"700"}>
-                  Resume
+                  PROJECTS
                 </Typography>
               </StyledResumeButton>
               <Box display="flex" gap="1rem" alignSelf="center">
