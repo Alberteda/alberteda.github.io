@@ -1,13 +1,15 @@
-import { Box, Typography, Button } from "@mui/material"
+import { Box, Typography, Button, Modal } from "@mui/material"
 import { StyledImageWrapper, StyledImage, StyledDivider, StyledResumeButton, StyledSocials } from "./styled"
 import ConstructionIcon from '@mui/icons-material/Construction'
 import ProfilePicture from './profile-pic.jpg'
 import Linkedin from '../../../assets/linkedin.svg'
 import GitHub from '../../../assets/github.svg'
 import Mail from '../../../assets/mail.svg'
+import { useState } from "react"
 
 export const LandingPage = () => {
 
+  const [open, setOpen] = useState(false)
 
   return (
     <Box padding="1rem 20rem">
@@ -58,6 +60,7 @@ export const LandingPage = () => {
                         border: "4px solid #EE5100"
                       }
                     }}
+                onClick={() => setOpen(true)}
               >
                 <Typography variant="body1" color="white" fontWeight={"700"}>
                   PROJECTS
@@ -115,6 +118,26 @@ export const LandingPage = () => {
           </Box>
         </Box>
       </Box>
+      <Modal
+        open={open}
+        onClose={() => setOpen(false)}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        <Box width="400px" bgcolor="red" justifyContent={"center"}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Text in a modal
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          </Typography>
+        </Box>
+      </Modal>
     </Box>
     
   )
