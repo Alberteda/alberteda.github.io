@@ -5,9 +5,12 @@ import ProfilePicture from './profile-pic.jpg'
 import Linkedin from '../../../assets/linkedin.svg'
 import GitHub from '../../../assets/github.svg'
 import Mail from '../../../assets/mail.svg'
+import { useState } from "react"
+import Projects from "../projects/Projects"
 
 export const LandingPage = () => {
 
+  const [showProjects, setShowProjects] = useState(false)
 
   return (
     <Box padding="1rem 20rem">
@@ -58,6 +61,7 @@ export const LandingPage = () => {
                         border: "4px solid #EE5100"
                       }
                     }}
+                onClick={() => {setShowProjects(true)}}
               >
                 <Typography variant="body1" color="white" fontWeight={"700"}>
                   PROJECTS
@@ -115,8 +119,8 @@ export const LandingPage = () => {
           </Box>
         </Box>
       </Box>
-    </Box>
-    
+    <Projects visible={showProjects} setVisible={setShowProjects} />
+    </Box>    
   )
 }
 
