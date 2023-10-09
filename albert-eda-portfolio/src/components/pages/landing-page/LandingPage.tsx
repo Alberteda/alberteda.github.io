@@ -104,7 +104,7 @@ export const LandingPage = () => {
                             OBSIDI
                           </Typography>
                   </Button> . 
-                And I have made substantial contributions to the developement of the <span style={{ color: "#BB86FC", fontWeight: "700" }}>OBSIDI</span> platform.
+                Over the past year and a half, I've made substantial contributions to the development of the <span style={{ color: "#BB86FC", fontWeight: "700" }}>OBSIDI</span> platform.
               </Typography>
             </Box>
             <Box textAlign={"left"}>
