@@ -32,7 +32,7 @@ export const Projects: FunctionComponent<ProjectsProps> = ({ visible, setVisible
             <Box 
                 bgcolor="#232526" padding="5rem"
             >
-                <Box border="2px solid #F4D03F">
+                <Box border="2px solid white">
                     <Card sx={{ backgroundColor: "#232526", maxWidth: "25rem" }}>
                         <CardHeader
                             avatar={
@@ -54,6 +54,9 @@ export const Projects: FunctionComponent<ProjectsProps> = ({ visible, setVisible
                         <CardContent>
                             <Typography color="white">
                                 Obsidi By BPTN is an employment-focused, multi-sided marketplace that enables Black professionals to network globally, learn, go to events, connect with executives from leading tech companies and access future job opportunities.
+                            </Typography>
+                            <Typography color="red">
+                                React, Material UI, Styled Components, Typescript, Node JS, PostgreSQL, Postman, Dockers
                             </Typography>
                         </CardContent>
                         <CardActions sx={{ display: "flex", gap: "1rem" }}>
