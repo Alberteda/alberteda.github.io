@@ -1,7 +1,6 @@
-import { Dialog, Box, Typography, Button, Card, CardHeader, Avatar, CardMedia, CardContent, CardActions, Divider } from "@mui/material"
+import { Dialog, Box, Typography, Button, Card, CardHeader, Avatar, CardContent, CardActions, Divider } from "@mui/material"
 import { FunctionComponent } from "react"
 import OBSIDI from "../../../assets/obsidi_logo_white.png"
-import ObsidiBanner from "../../../assets/obsidi-banner.png"
 import GitHub from '../../../assets/github.svg'
 import styled from "styled-components"
 
@@ -14,7 +13,7 @@ export const StyledSocials = styled.img`
 `
 
 export const StyledDivider = styled(Divider)`
-    width: 80%;
+    width: 40%;
     height: 0.1rem;
     background-color: #8AAAE5;
     border-radius: 20px;
@@ -22,9 +21,8 @@ export const StyledDivider = styled(Divider)`
 
 export const StyledDialog = styled(Dialog)`
     && { // increase specificity to override the default styles
-
         .MuiDialog-paper {
-            border-radius: 10px;
+            border-radius: 20px;
         }
     }
 `
@@ -43,7 +41,7 @@ export const Projects: FunctionComponent<ProjectsProps> = ({ visible, setVisible
             sx={{
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "center",
+                alignItems: "center"
             }}
             fullWidth
         >
@@ -54,35 +52,23 @@ export const Projects: FunctionComponent<ProjectsProps> = ({ visible, setVisible
                     </Typography>
                     <StyledDivider />
                 </Box>
-                <Box border="2px solid white" display="flex">
+                <Box display="flex">
                     <Box>
-                        <Card sx={{ backgroundColor: "#232526", maxWidth: "30rem" }}>
+                        <Card sx={{ backgroundColor: "#232526", maxWidth: "30rem", paddingBottom: "1rem", boxShadow: "2px 2px 5px #BB86FC" }}>
                             <CardHeader
                                 avatar={
                                     <Avatar src={OBSIDI} sx={{ width: "8rem", height: "auto", borderRadius: "0" }} />
                                 }
                             />
-                            <CardMedia
-                                component="img"
-                                sx={{
-                                    height: "15rem",
-                                    width: "auto",
-                                    objectFit: "cover",
-                                    objectPosition: "center",
-                                    margin: "auto"
-                                }}
-                                image={ObsidiBanner}
-                                alt="Welcome to OBSIDI banner"
-                            />
                             <CardContent>
-                                <Typography color="white" variant="body1">
+                                <Typography color="white" variant="body1" fontWeight="bold">
                                     An employment-focused, multi-sided marketplace that enables access to networking and future job opportunities Black professionals globally.
                                 </Typography>
-                                <Typography color="red" variant="body2" mt="1rem">
-                                    React, Material UI, Styled Components, Typescript, Node JS, PostgreSQL, Postman, Dockers
+                                <Typography color="white" variant="body2" mt="1rem" letterSpacing="2px">
+                                    React, Typescript, Node JS, PostgreSQL, Postman, Dockers
                                 </Typography>
                             </CardContent>
-                            <CardActions sx={{ display: "flex", gap: "1rem" }}>
+                            <CardActions sx={{ display: "flex", gap: "1rem", paddingLeft: "1rem" }}>
                                 <a href="https://github.com/albert-eda-bptn" target="_blank" rel="noopener noreferrer">
                                     <StyledSocials src={GitHub} />
                                 </a>
