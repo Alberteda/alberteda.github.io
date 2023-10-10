@@ -13,7 +13,7 @@ export const StyledSocials = styled.img`
 `
 
 export const StyledDivider = styled(Divider)`
-    width: 40%;
+    width: 30%;
     height: 0.1rem;
     background-color: #8AAAE5;
     border-radius: 20px;
@@ -52,7 +52,7 @@ export const Projects: FunctionComponent<ProjectsProps> = ({ visible, setVisible
                     </Typography>
                     <StyledDivider />
                 </Box>
-                <Box display="flex">
+                <Box display="flex" padding="1rem 0">
                     <Box>
                         <Card sx={{ backgroundColor: "#232526", maxWidth: "30rem", paddingBottom: "1rem", boxShadow: "2px 2px 5px #BB86FC" }}>
                             <CardHeader
