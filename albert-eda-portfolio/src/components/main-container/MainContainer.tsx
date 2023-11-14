@@ -6,7 +6,7 @@ interface MainContainerProps {
 export const MainContainer = ({ children }: MainContainerProps) => {
     
     return (
-        <StyledPageWrapper bgcolor="lightblue">
+        <StyledPageWrapper>
             {children}
         </StyledPageWrapper>
     )
