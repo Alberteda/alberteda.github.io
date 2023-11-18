@@ -19,7 +19,7 @@ export const LandingPage = () => {
     <Box
       display="flex"
       flexDirection="column"
-      width="100%"
+      width={isDevice ? "80%" : "100%"}
       maxWidth={isDevice ? "100%" : "75vw"}
       padding={isDevice ? "0 0.938rem" : ""}
       margin="4rem auto" 
@@ -134,54 +134,25 @@ export const LandingPage = () => {
         <Box 
           display="flex"
           flexDirection="column"
-          gap="10rem" 
-          bgcolor="red"
+          gap="3rem" 
         >
-          <Box display="flex" flexDirection="column" gap="2rem">
-                <Box display="flex" flexDirection="column" gap="2rem" alignItems="center">
-                  <StyledImageWrapper>
-                    <StyledImage src={ProfilePicture} alt="profile-picture"/>
-                  </StyledImageWrapper>
-                  <StyledResumeButton 
-                    endIcon={
-                      <ConstructionIcon
-                        sx={{
-                          color: '#F4D03F',
-                          width: "1.5rem",
-                          height: "1.5rem",
-                          '&:hover': {
-                            color: "#EE5100",
-                          }
-                        }}
-                      />
-                    }
-                    variant="outlined" 
-                    sx={{ 
-                          borderRadius: "20px", 
-                          border: "4px solid #F4D03F", 
-                          color: 'linear-gradient(132deg, #F4D03F 0%, #16A085 100%)',
-                          '&:hover': {
-                            border: "4px solid #EE5100"
-                          }
-                        }}
-                    onClick={() => {setShowProjects(true)}}
-                  >
-                    <Typography variant="body1" color="white" fontWeight={"700"}>
-                      PROJECTS
-                    </Typography>
-                  </StyledResumeButton>
-                </Box>
-                
+          <Box display="flex" flexDirection="column">
+            <Box display="flex" flexDirection="column" gap="2rem" alignItems="center">
+              <StyledImageWrapper>
+                <StyledImage src={ProfilePicture} alt="profile-picture"/>
+              </StyledImageWrapper>
+              
+            </Box>   
           </Box>
           <Box display="flex" flexDirection="column" gap="2rem" justifyContent="center">
             <Box display={"grid"} gridTemplateRows={"1fr"} gap="2rem">
-              <Box textAlign={"center"}>
-                <Typography variant="h2" fontWeight={"700"} color={"white"}>
+              <Box display="flex" flexDirection="column" alignItems="center">
+                <Typography variant="h4" fontWeight={"700"} color={"white"}>
                   Hey, I'm Albert
                 </Typography>
-                <StyledDivider style={{ marginTop: "0.5rem" }} />
+                <StyledDivider style={{ marginTop: "0.5rem"}} />
               </Box>
-              <Box textAlign={"left"}>
+              <Box textAlign="center">
                 <Typography variant="h6" color={"white"}>
                   I'm a Software Engineer at 
                     <Button
@@ -197,7 +168,7 @@ export const LandingPage = () => {
                               OBSIDI
                             </Typography>
                     </Button> . 
-                  Over the past year and a half, I've made substantial contributions to the development of the <span style={{ color: "#BB86FC", fontWeight: "700" }}>Obsidi</span> platform.
+                  <br />Over the past year and a half, I've made substantial contributions to the development of the <span style={{ color: "#BB86FC", fontWeight: "700" }}>Obsidi</span> platform.
                 </Typography>
               </Box>
               <Box textAlign={"left"}>
@@ -206,6 +177,34 @@ export const LandingPage = () => {
                 </Typography>
               </Box>
             </Box>
+            <StyledResumeButton 
+                endIcon={
+                  <ConstructionIcon
+                    sx={{
+                      color: '#F4D03F',
+                      width: "1.5rem",
+                      height: "1.5rem",
+                      '&:hover': {
+                        color: "#EE5100",
+                      }
+                    }}
+                  />
+                }
+                variant="outlined" 
+                sx={{ 
+                      borderRadius: "20px", 
+                      border: "4px solid #F4D03F", 
+                      color: 'linear-gradient(132deg, #F4D03F 0%, #16A085 100%)',
+                      '&:hover': {
+                        border: "4px solid #EE5100"
+                      }
+                    }}
+                onClick={() => {setShowProjects(true)}}
+              >
+                <Typography variant="body1" color="white" fontWeight={"700"}>
+                  PROJECTS
+                </Typography>
+              </StyledResumeButton>
             <Box display="flex" gap="1rem" alignSelf="center">
               <a href="https://www.linkedin.com/in/alberteda" target="_blank" rel="noopener noreferrer">
                 <StyledSocials src={Linkedin} />
