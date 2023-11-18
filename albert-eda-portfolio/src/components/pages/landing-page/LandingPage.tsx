@@ -171,22 +171,7 @@ export const LandingPage = () => {
                     </Typography>
                   </StyledResumeButton>
                 </Box>
-                <Box display="flex" gap="1rem" alignSelf="center">
-                <a href="https://www.linkedin.com/in/alberteda" target="_blank" rel="noopener noreferrer">
-                  <StyledSocials src={Linkedin} />
-                </a>
-                <a href="https://github.com/alberteda" target="_blank" rel="noopener noreferrer">
-                  <StyledSocials src={GitHub} />
-                </a>
-                <a href="mailto:alberteda32@gmail.com" target="_blank" rel="noopener noreferrer">
-                  <StyledSocials src={Mail} />
-                </a>
-                </Box>
-                <Box>
-                  <Typography variant="button" color="white" fontWeight={"700"}>
-                    Albert Eda 2023 ©
-                  </Typography>
-                </Box>
+                
           </Box>
           <Box display="flex" flexDirection="column" gap="2rem" justifyContent="center">
             <Box display={"grid"} gridTemplateRows={"1fr"} gap="2rem">
@@ -220,6 +205,22 @@ export const LandingPage = () => {
                   In my free time I run an entertainment studio, based in Ottawa. I like to make music, take photos on film, and play video games.
                 </Typography>
               </Box>
+            </Box>
+            <Box display="flex" gap="1rem" alignSelf="center">
+              <a href="https://www.linkedin.com/in/alberteda" target="_blank" rel="noopener noreferrer">
+                <StyledSocials src={Linkedin} />
+              </a>
+              <a href="https://github.com/alberteda" target="_blank" rel="noopener noreferrer">
+                <StyledSocials src={GitHub} />
+              </a>
+              <a href="mailto:alberteda32@gmail.com" target="_blank" rel="noopener noreferrer">
+                <StyledSocials src={Mail} />
+              </a>
+            </Box>
+            <Box>
+              <Typography variant="button" color="white" fontWeight={"700"}>
+                Albert Eda 2023 ©
+              </Typography>
             </Box>
           </Box>
         </Box>
