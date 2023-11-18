@@ -13,7 +13,12 @@ export const LandingPage = () => {
   const [showProjects, setShowProjects] = useState(false)
 
   return (
-    <Box padding="1rem 20rem">
+    <Box 
+      width="100%"
+      maxWidth="75vw" 
+      margin="4rem auto" 
+      bgcolor={"#232526"}
+    >
       <Box
         display="flex"
         flexDirection="column"
