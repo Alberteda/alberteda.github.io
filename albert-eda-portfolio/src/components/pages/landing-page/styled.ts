@@ -50,6 +50,7 @@ export const StyledFeed = styled(Box)`
 `
 
 export const StyledResumeButton = styled(Button)`
-    width: 16.25rem;
+    width: 100%;
+    max-width: 16.25rem;
     height: 3.25rem;
 `

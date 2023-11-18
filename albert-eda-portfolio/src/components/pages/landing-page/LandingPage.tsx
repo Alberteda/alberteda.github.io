@@ -13,7 +13,7 @@ export const LandingPage = () => {
   const [showProjects, setShowProjects] = useState(false)
 
   return (
-    <Box padding="1rem 20rem">
+    <Box padding={{ xs: '1rem', md: '1rem 20rem' }}>
       <Box
         display="flex"
         flexDirection="column"
@@ -34,9 +34,11 @@ export const LandingPage = () => {
           </Typography>
         </Box>
       </Box>
-      <Box display="flex" gap="20rem">
+      <Box display={{ xs: 'block', md: 'flex' }} gap="20rem">
         <Box display="flex" flexDirection="column" gap="2rem">
-            <StyledImageWrapper>
+            <StyledImageWrapper
+              sx={{ width: '10rem', height: '10rem' }}
+            >
               <StyledImage src={ProfilePicture} alt="profile-picture"/>
             </StyledImageWrapper>
               <StyledResumeButton 
