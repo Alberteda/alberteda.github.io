@@ -13,7 +13,9 @@ export const LandingPage = () => {
   const [showProjects, setShowProjects] = useState(false)
 
   return (
-    <Box 
+    <Box
+      display="flex"
+      flexDirection="column"
       width="100%"
       maxWidth="75vw" 
       margin="4rem auto" 
