@@ -44,7 +44,7 @@ export const LandingPage = () => {
           </Typography>
         </Box>
       </Box>
-      {!isDevice && (<Box display="flex" gap="20rem" bgcolor="red">
+      {!isDevice && (<Box display="flex" gap="20rem">
         <Box display="flex" flexDirection="column" gap="2rem">
             <StyledImageWrapper>
               <StyledImage src={ProfilePicture} alt="profile-picture"/>
@@ -144,7 +144,7 @@ export const LandingPage = () => {
             </Box>   
           </Box>
           <Box display="flex" flexDirection="column" gap="2rem" justifyContent="center">
-            <Box display={"grid"} gridTemplateRows={"1fr"} gap="2rem">
+            <Box display={"grid"} gridTemplateRows={"1fr"} gap="1rem">
               <Box display="flex" flexDirection="column" alignItems="center">
                 <Typography variant="h4" fontWeight={"700"} color={"white"}>
                   Hey, I'm Albert
