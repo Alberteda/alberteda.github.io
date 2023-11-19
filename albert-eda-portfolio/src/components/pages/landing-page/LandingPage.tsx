@@ -152,7 +152,7 @@ export const LandingPage = () => {
                 <StyledDivider style={{ marginTop: "0.5rem"}} />
               </Box>
               <Box textAlign="center">
-                <Typography variant="h6" color={"white"}>
+                <Typography variant="body1" color={"white"}>
                   I'm a Software Engineer at 
                     <Button
                       href="https://app.obsidi.com/"
@@ -163,47 +163,49 @@ export const LandingPage = () => {
                             border: "2px solid #BB86FC",
                             marginLeft: "0.5rem"
                           }}>
-                            <Typography variant="body1" color="#BB86FC" fontWeight={"700"}>
+                            <Typography variant="body2" color="#BB86FC" fontWeight={"700"}>
                               OBSIDI
                             </Typography>
                     </Button> . 
                   <br />Over the past year and a half, I've made substantial contributions to the development of the <span style={{ color: "#BB86FC", fontWeight: "700" }}>Obsidi</span> platform.
                 </Typography>
               </Box>
-              <Box textAlign={"left"}>
-                <Typography variant="h6" color={"white"}>
+              <Box textAlign={"center"}>
+                <Typography variant="subtitle1" color={"white"}>
                   In my free time I run an entertainment studio, based in Ottawa. I like to make music, take photos on film, and play video games.
                 </Typography>
               </Box>
             </Box>
-            <StyledResumeButton 
-                endIcon={
-                  <ConstructionIcon
-                    sx={{
-                      color: '#F4D03F',
-                      width: "1.5rem",
-                      height: "1.5rem",
-                      '&:hover': {
-                        color: "#EE5100",
-                      }
-                    }}
-                  />
-                }
-                variant="outlined" 
-                sx={{ 
-                      borderRadius: "20px", 
-                      border: "4px solid #F4D03F", 
-                      color: 'linear-gradient(132deg, #F4D03F 0%, #16A085 100%)',
-                      '&:hover': {
-                        border: "4px solid #EE5100"
-                      }
-                    }}
-                onClick={() => {setShowProjects(true)}}
-              >
-                <Typography variant="body1" color="white" fontWeight={"700"}>
-                  PROJECTS
-                </Typography>
+            <Box>
+              <StyledResumeButton 
+                  endIcon={
+                    <ConstructionIcon
+                      sx={{
+                        color: '#F4D03F',
+                        width: "1.5rem",
+                        height: "1.5rem",
+                        '&:hover': {
+                          color: "#EE5100",
+                        }
+                      }}
+                    />
+                  }
+                  variant="outlined" 
+                  sx={{ 
+                        borderRadius: "20px", 
+                        border: "4px solid #F4D03F", 
+                        color: 'linear-gradient(132deg, #F4D03F 0%, #16A085 100%)',
+                        '&:hover': {
+                          border: "4px solid #EE5100"
+                        }
+                      }}
+                  onClick={() => {setShowProjects(true)}}
+                >
+                  <Typography variant="body1" color="white" fontWeight={"700"}>
+                    PROJECTS
+                  </Typography>
               </StyledResumeButton>
+            </Box>
             <Box display="flex" gap="1rem" alignSelf="center">
               <a href="https://www.linkedin.com/in/alberteda" target="_blank" rel="noopener noreferrer">
                 <StyledSocials src={Linkedin} />
