@@ -21,7 +21,6 @@ export const LandingPage = () => {
       flexDirection="column"
       width={isDevice ? "80%" : "100%"}
       maxWidth={isDevice ? "100%" : "75vw"}
-      padding={isDevice ? "0 0.938rem" : ""}
       margin="4rem auto" 
       bgcolor={"#232526"}
     >
