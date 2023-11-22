@@ -1,6 +1,6 @@
 import { Box, Typography, Button } from "@mui/material"
-import { StyledImageWrapper, StyledImage, StyledDivider, StyledResumeButton, StyledSocials } from "./styled"
-import ConstructionIcon from '@mui/icons-material/Construction'
+import { StyledImageWrapper, StyledImage, StyledDivider, StyledSocials } from "./styled"
+// import ConstructionIcon from '@mui/icons-material/Construction'
 import ProfilePicture from './profile-pic.jpg'
 import Linkedin from '../../../assets/linkedin.svg'
 import GitHub from '../../../assets/github.svg'
@@ -49,7 +49,7 @@ export const LandingPage = () => {
             <StyledImageWrapper>
               <StyledImage src={ProfilePicture} alt="profile-picture"/>
             </StyledImageWrapper>
-              <StyledResumeButton 
+              {/* <StyledResumeButton 
                 endIcon={
                   <ConstructionIcon
                     sx={{
@@ -76,7 +76,7 @@ export const LandingPage = () => {
                 <Typography variant="body1" color="white" fontWeight={"700"}>
                   PROJECTS
                 </Typography>
-              </StyledResumeButton>
+              </StyledResumeButton> */}
               <Box display="flex" gap="1rem" alignSelf="center">
               <a href="https://www.linkedin.com/in/alberteda" target="_blank" rel="noopener noreferrer">
                 <StyledSocials src={Linkedin} />
@@ -176,7 +176,7 @@ export const LandingPage = () => {
                 </Typography>
               </Box>
             </Box>
-            <Box>
+            {/* <Box>
               <StyledResumeButton 
                   endIcon={
                     <ConstructionIcon
@@ -205,7 +205,7 @@ export const LandingPage = () => {
                     PROJECTS
                   </Typography>
               </StyledResumeButton>
-            </Box>
+            </Box> */}
             <Box display="flex" gap="1rem" alignSelf="center">
               <a href="https://www.linkedin.com/in/alberteda" target="_blank" rel="noopener noreferrer">
                 <StyledSocials src={Linkedin} />
