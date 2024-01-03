@@ -28,8 +28,8 @@ export const StyledImage = styled.img`
 `
 
 export const StyledSocials = styled.img`
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
