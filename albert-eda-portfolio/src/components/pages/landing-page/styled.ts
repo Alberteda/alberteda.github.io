@@ -11,8 +11,8 @@ export const StyledBox = styled(Box)`
 
 export const StyledImageWrapper = styled(Box)`
     background-color: grey;
-    width: 16.25rem;
-    height: 16.25rem;
+    width: 14rem;
+    height: 14rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;

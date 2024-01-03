@@ -77,7 +77,7 @@ export const LandingPage = () => {
                   PROJECTS
                 </Typography>
               </StyledResumeButton> */}
-              <Box display="flex" gap="1rem" alignSelf="center">
+              <Box display="flex" gap="1rem" alignSelf="center" textAlign="center" margin="0 auto">
               <a href="https://www.linkedin.com/in/alberteda" target="_blank" rel="noopener noreferrer">
                 <StyledSocials src={Linkedin} />
               </a>
