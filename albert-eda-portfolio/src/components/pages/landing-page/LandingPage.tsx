@@ -1,11 +1,6 @@
 import { Box, Typography, Button } from "@mui/material";
-import {
-  StyledImageWrapper,
-  StyledImage,
-  StyledDivider,
-  StyledSocials,
-} from "./styled";
-// import ConstructionIcon from '@mui/icons-material/Construction'
+import { StyledImageWrapper, StyledImage, StyledDivider, StyledSocials, StyledButton } from "./styled";
+import ConstructionIcon from "@mui/icons-material/Construction";
 import ProfilePicture from "./profile-pic.jpg";
 import Linkedin from "../../../assets/linkedin.svg";
 import GitHub from "../../../assets/github.svg";
@@ -20,270 +15,152 @@ export const LandingPage = () => {
   const { isDevice } = useScreenSizes();
 
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      width={isDevice ? "80%" : "100%"}
-      maxWidth={isDevice ? "100%" : "75vw"}
-      margin="4rem auto"
-      bgcolor={"#232526"}>
-      <Box display="flex" flexDirection="column" mb="5rem" gap="3rem">
+    <Box display="flex" flexDirection="column" maxWidth={isDevice ? "100%" : "75vw"} p="1rem">
+      <Box display="flex" flexDirection="column" mb="5rem" gap="2rem">
         <Box textAlign={"left"}>
-          <Typography variant="h5" fontWeight={"bolder"} color={"white"}>
-            Albert Eda
-          </Typography>
-        </Box>
-        <Box textAlign={"left"}>
-          <Typography
-            variant={isDevice ? "h4" : "h2"}
-            fontWeight={"700"}
-            color={"white"}
-            mb={"0.5rem"}>
+          <Typography variant={isDevice ? "h4" : "h2"} fontWeight={"700"} color={"white"} mb={"0rem"}>
             Software Engineer
           </Typography>
           <Typography variant="body1" color={"white"}>
             Ottawa, ON, Canada
           </Typography>
         </Box>
-      </Box>
-      {!isDevice && (
-        <Box display="grid" gridTemplateColumns="0.5fr 1fr" gap="10rem">
-          <Box
-            display="flex"
-            flexDirection="column"
-            gap="1rem"
-            alignItems="center">
-            <StyledImageWrapper>
-              <StyledImage src={ProfilePicture} alt="profile-picture" />
-            </StyledImageWrapper>
-            {/* <StyledResumeButton 
-                endIcon={
-                  <ConstructionIcon
-                    sx={{
-                      color: '#F4D03F',
-                      width: "1.5rem",
-                      height: "1.5rem",
-                      '&:hover': {
-                        color: "#EE5100",
-                      }
-                    }}
-                  />
-                }
-                variant="outlined" 
-                sx={{ 
-                      borderRadius: "20px", 
-                      border: "4px solid #F4D03F", 
-                      color: 'linear-gradient(132deg, #F4D03F 0%, #16A085 100%)',
-                      '&:hover': {
-                        border: "4px solid #EE5100"
-                      }
-                    }}
-                onClick={() => {setShowProjects(true)}}
-              >
-                <Typography variant="body1" color="white" fontWeight={"700"}>
-                  PROJECTS
-                </Typography>
-              </StyledResumeButton> */}
-            <Box
-              display="flex"
-              gap="1rem"
-              justifyContent="center"
-              margin="0 auto">
-              <a
-                href="https://www.linkedin.com/in/alberteda"
-                target="_blank"
-                rel="noopener noreferrer">
-                <StyledSocials src={Linkedin} />
-              </a>
-              <a
-                href="https://github.com/alberteda"
-                target="_blank"
-                rel="noopener noreferrer">
-                <StyledSocials src={GitHub} />
-              </a>
-              <a
-                href="mailto:alberteda32@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer">
-                <StyledSocials src={Mail} />
-              </a>
-            </Box>
-            <Box mt="-0.5rem">
-              <Typography variant="button" color="white" fontWeight={"700"}>
-                Albert Eda 2023 ©
-              </Typography>
-            </Box>
-          </Box>
-          <Box
-            display="flex"
-            flexDirection="column"
-            gap="2rem"
-            justifyContent="center">
-            <Box display={"grid"} gridTemplateRows={"1fr"} gap="2rem">
-              <Box textAlign={"center"}>
-                <Typography variant="h2" fontWeight={"700"} color={"white"}>
-                  Hey, I'm Albert
-                </Typography>
-                <StyledDivider style={{ marginTop: "0.5rem" }} />
-              </Box>
-              <Box textAlign={"left"}>
-                <Typography variant="h6" color={"white"}>
-                  I'm a Software Engineer at
-                  <Button
-                    href="https://app.obsidi.com/"
-                    target="_blank"
-                    rel="noopener noreferrer" // security: protects the processing of opening a new tab, disabling the windows opener and referer properties
-                    sx={{
-                      borderRadius: "10px",
-                      border: "2px solid #BB86FC",
-                      marginLeft: "0.5rem",
-                    }}>
-                    <Typography
-                      variant="body1"
-                      color="#BB86FC"
-                      fontWeight={"700"}>
-                      OBSIDI
-                    </Typography>
-                  </Button>{" "}
-                  . Over the past year and a half, I've made substantial
-                  contributions to the development of the{" "}
-                  <span style={{ color: "#BB86FC", fontWeight: "700" }}>
-                    Obsidi
-                  </span>{" "}
-                  platform.
-                </Typography>
-              </Box>
-              <Box textAlign={"left"}>
-                <Typography variant="h6" color={"white"}>
-                  In my free time I run an entertainment studio, based in
-                  Ottawa. I like to make music, take photos on film, and play
-                  video games.
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-      )}
-      {isDevice && (
-        <Box display="flex" flexDirection="column" gap="3rem">
-          <Box display="flex" flexDirection="column">
-            <Box
-              display="flex"
-              flexDirection="column"
-              gap="2rem"
-              alignItems="center">
+        <Box>
+          <Box width="100%">
+            <Box display="flex" sx={{ float: "left" }}>
               <StyledImageWrapper>
                 <StyledImage src={ProfilePicture} alt="profile-picture" />
               </StyledImageWrapper>
             </Box>
-          </Box>
-          <Box
-            display="flex"
-            flexDirection="column"
-            gap="2rem"
-            justifyContent="center">
-            <Box display={"grid"} gridTemplateRows={"1fr"} gap="1rem">
-              <Box display="flex" flexDirection="column" alignItems="center">
-                <Typography variant="h4" fontWeight={"700"} color={"white"}>
-                  Hey, I'm Albert
-                </Typography>
-                <StyledDivider style={{ marginTop: "0.5rem" }} />
-              </Box>
-              <Box textAlign="center">
-                <Typography variant="body1" color={"white"}>
-                  I'm a Software Engineer at
-                  <Button
-                    href="https://app.obsidi.com/"
-                    target="_blank"
-                    rel="noopener noreferrer" // security: protects the processing of opening a new tab, disabling the windows opener and referer properties
-                    sx={{
-                      borderRadius: "10px",
-                      border: "2px solid #BB86FC",
-                      marginLeft: "0.5rem",
-                    }}>
-                    <Typography
-                      variant="body2"
-                      color="#BB86FC"
-                      fontWeight={"700"}>
-                      OBSIDI
+            <Box>
+              <Box display="flex" flexDirection="column" gap="1rem" justifyContent="center">
+                <Box display="flex" gap="1rem" justifyContent="center">
+                  <a href="https://www.linkedin.com/in/alberteda" target="_blank" rel="noopener noreferrer">
+                    <StyledSocials src={Linkedin} />
+                  </a>
+                  <a href="https://github.com/alberteda" target="_blank" rel="noopener noreferrer">
+                    <StyledSocials src={GitHub} />
+                  </a>
+                  <a href="mailto:alberteda32@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <StyledSocials src={Mail} />
+                  </a>
+                </Box>
+                <Box display="flex" flexDirection="column" gap="1rem" justifyContent="center" width="80%">
+                  <StyledButton
+                    endIcon={
+                      <ConstructionIcon
+                        sx={{
+                          color: "rgb(124, 45, 18)",
+                          "&:hover": {
+                            color: "#EE5100",
+                          },
+                        }}
+                      />
+                    }
+                    variant="outlined"
+                    onClick={() => {
+                      setShowProjects(true);
+                    }}
+                  >
+                    <Typography variant="body2" color="rgb(124, 45, 18)" fontWeight={"700"}>
+                      PROJECTS
                     </Typography>
-                  </Button>{" "}
-                  .
-                  <br />
-                  Over the past year and a half, I've made substantial
-                  contributions to the development of the{" "}
-                  <span style={{ color: "#BB86FC", fontWeight: "700" }}>
-                    Obsidi
-                  </span>{" "}
-                  platform.
-                </Typography>
+                  </StyledButton>
+                  <StyledButton
+                    endIcon={
+                      <ConstructionIcon
+                        sx={{
+                          color: "rgb(124, 45, 18)",
+                          "&:hover": {
+                            color: "#EE5100",
+                          },
+                        }}
+                      />
+                    }
+                    variant="outlined"
+                    sx={{
+                      backgroundColor: "rgb(252, 211, 77)",
+                      color: "rgb(124, 45, 18)",
+                      borderColor: "rgb(124, 45, 18)",
+                      fontWeight: "bold",
+                      boxShadow: "5px 5px 0 rgb(124, 45, 18)",
+                      transition: "box-shadow 100ms ease",
+                      "&:hover": {
+                        boxShadow: "2px 2px 0 rgb(124, 45, 18)",
+                      },
+                      "&:active": {
+                        boxShadow: "0 0 0 0 rgb(124, 45, 18)",
+                        transition: "box-shadow 50ms ease",
+                      },
+                    }}
+                    onClick={() => {
+                      setShowProjects(true);
+                    }}
+                  >
+                    <Typography variant="body2" color="rgb(124, 45, 18)" fontWeight={"700"}>
+                      PROJECTS
+                    </Typography>
+                  </StyledButton>
+                </Box>
               </Box>
-              <Box textAlign={"center"}>
-                <Typography variant="subtitle1" color={"white"}>
-                  In my free time I run an entertainment studio, based in
-                  Ottawa. I like to make music, take photos on film, and play
-                  video games.
-                </Typography>
-              </Box>
-            </Box>
-            {/* <Box>
-              <StyledResumeButton 
-                  endIcon={
-                    <ConstructionIcon
-                      sx={{
-                        color: '#F4D03F',
-                        width: "1.5rem",
-                        height: "1.5rem",
-                        '&:hover': {
-                          color: "#EE5100",
-                        }
-                      }}
-                    />
-                  }
-                  variant="outlined" 
-                  sx={{ 
-                        borderRadius: "20px", 
-                        border: "4px solid #F4D03F", 
-                        color: 'linear-gradient(132deg, #F4D03F 0%, #16A085 100%)',
-                        '&:hover': {
-                          border: "4px solid #EE5100"
-                        }
-                      }}
-                  onClick={() => {setShowProjects(true)}}
-                >
-                  <Typography variant="body1" color="white" fontWeight={"700"}>
-                    PROJECTS
-                  </Typography>
-              </StyledResumeButton>
-            </Box> */}
-            <Box display="flex" gap="1rem" alignSelf="center">
-              <a
-                href="https://www.linkedin.com/in/alberteda"
-                target="_blank"
-                rel="noopener noreferrer">
-                <StyledSocials src={Linkedin} />
-              </a>
-              <a
-                href="https://github.com/alberteda"
-                target="_blank"
-                rel="noopener noreferrer">
-                <StyledSocials src={GitHub} />
-              </a>
-              <a
-                href="mailto:alberteda32@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer">
-                <StyledSocials src={Mail} />
-              </a>
-            </Box>
-            <Box mt="-1.5rem">
-              <Typography variant="button" color="white" fontWeight={"700"}>
-                Albert Eda 2023 ©
+              <Typography variant="body1" color={"white"} lineHeight={1.6}>
+                <br /> <br /> <br /> <br />
+                Albert Eda is a Software Engineer who previously worked at OBSIDI, EPIC, and CIMSLAB. With
+                over 5 years of experience creating digital products, his work is a blend of several
+                disciplines — full-stack development, mobile development, application development, data
+                analysis, and artificial intelligence.
               </Typography>
             </Box>
           </Box>
         </Box>
-      )}
+      </Box>
+      <Box display="flex" flexDirection="column" gap="3rem">
+        <Box display="flex" flexDirection="column" gap="2rem" justifyContent="center">
+          <Box display={"grid"} gridTemplateRows={"1fr"} gap="1rem">
+            <Box display="flex" flexDirection="column" alignItems="center">
+              <Typography variant="h4" fontWeight={"700"} color={"white"}>
+                Hey, I'm Albert
+              </Typography>
+              <StyledDivider style={{ marginTop: "0.5rem" }} />
+            </Box>
+            <Box textAlign="center">
+              <Typography variant="body1" color={"white"}>
+                I'm a Software Engineer at
+                <Button
+                  href="https://app.obsidi.com/"
+                  target="_blank"
+                  rel="noopener noreferrer" // security: protects the processing of opening a new tab, disabling the windows opener and referer properties
+                  sx={{
+                    borderRadius: "10px",
+                    border: "2px solid #BB86FC",
+                    marginLeft: "0.5rem",
+                  }}
+                >
+                  <Typography variant="body2" color="#BB86FC" fontWeight={"700"}>
+                    OBSIDI
+                  </Typography>
+                </Button>{" "}
+                .
+                <br />
+                Over the past year and a half, I've made substantial contributions to the development of the{" "}
+                <span style={{ color: "#BB86FC", fontWeight: "700" }}>Obsidi</span> platform.
+              </Typography>
+            </Box>
+            <Box textAlign={"center"}>
+              <Typography variant="subtitle1" color={"white"}>
+                In my free time I run an entertainment studio, based in Ottawa. I like to make music, take
+                photos on film, and play video games.
+              </Typography>
+            </Box>
+          </Box>
+
+          <Box mt="-1.5rem">
+            <Typography variant="button" color="white" fontWeight={"700"}>
+              Albert Eda 2023 ©
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
       <Projects visible={showProjects} setVisible={setShowProjects} />
     </Box>
   );
