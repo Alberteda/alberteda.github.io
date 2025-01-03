@@ -23,10 +23,10 @@ export const LandingPage = () => {
     >
       <Box display="flex" flexDirection="column" mb="3rem" gap="2rem">
         <Box textAlign={"left"}>
-          <Typography variant={isDevice ? "h4" : "h2"} fontWeight={"700"} color={"white"} mb={"0rem"}>
+          <Typography variant={isDevice ? "h3" : "h2"} fontWeight={"700"} color={"white"}>
             Software Engineer
           </Typography>
-          <Typography variant="body1" color={"white"}>
+          <Typography variant="subtitle2" color={"white"}>
             Ottawa, ON, Canada
           </Typography>
         </Box>
@@ -101,13 +101,13 @@ export const LandingPage = () => {
       </Box>
       <Box display={"flex"} flexDirection="column" gap="1rem">
         <Box textAlign="left">
-          <Typography variant="body1" color={"white"} mb="0.5rem">
+          <Typography variant="subtitle1" color={"white"} mb="0.5rem">
             {" "}
             Albert Eda is a Software Engineer working at <span style={{ color: "#BB86FC" }}>
               OBSIDI.
             </span>{" "}
           </Typography>
-          <Typography variant="body1" color={"white"}>
+          <Typography variant="subtitle1" color={"white"}>
             With over a year of experience, he has been instrumental in delivering impactful updates and
             innovative features to the Obsidi platform, empowering professionals around the globe.
           </Typography>
@@ -120,7 +120,7 @@ export const LandingPage = () => {
         </Box>
       </Box>
       <Box mt="5rem">
-        <Typography variant="button" color="white" fontWeight={"700"}>
+        <Typography variant="subtitle1" color="white" fontWeight={"700"}>
           Albert Eda 2025 ©
         </Typography>
       </Box>

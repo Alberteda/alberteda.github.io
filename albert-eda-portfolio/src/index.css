@@ -7,14 +7,15 @@
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   background: #3a512b;
+  font-family: "Signika Negative", serif;
 }
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Concert One", serif; */
 }
 
-@font-face {
+/* @font-face {
   font-family: "Helvetica Neue";
   src: url("https://use.typekit.net/yws2hqq.css");
 }
@@ -25,8 +26,8 @@ body {
 @font-face {
   font-family: "playfair display regular";
   src: url("fonts//Playfair_Display1/PlayfairDisplay-Regular.ttf");
-}
+} */
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  /* font-family: "Concert One", serif; */
 }
