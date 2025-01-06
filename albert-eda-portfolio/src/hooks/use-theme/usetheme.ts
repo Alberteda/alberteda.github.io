@@ -12,7 +12,7 @@ export const theme = createTheme({
   },
 
   typography: {
-    fontFamily: "Signika Negative, serif",
+    fontFamily: "Mulish, serif",
   },
 
   components: {
