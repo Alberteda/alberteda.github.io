@@ -14,23 +14,17 @@ export const LandingPage = () => {
   const { isDevice } = useScreenSizes();
 
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      maxWidth={isDevice ? "100%" : "75vw"}
-      p="1rem"
-      alignItems={"center"}
-    >
+    <Box p="1rem">
       <Box display="flex" flexDirection="column" mb="3rem" gap="2rem">
         <Box textAlign={"left"}>
-          <Typography variant={isDevice ? "h3" : "h2"} fontWeight={"700"} color={"white"}>
+          <Typography variant={isDevice ? "h4" : "h2"} fontWeight={"700"} color={"white"}>
             Software Engineer
           </Typography>
-          <Typography variant="subtitle2" color={"white"}>
+          <Typography variant="subtitle2" fontWeight={"regular"} color={"white"}>
             Ottawa, ON, Canada
           </Typography>
         </Box>
-        <Box width="100%" display="flex" gap="2rem">
+        <Box display="flex" gap="2rem">
           <StyledImageWrapper>
             <StyledImage src={ProfilePicture} alt="profile-picture" />
           </StyledImageWrapper>
@@ -46,7 +40,7 @@ export const LandingPage = () => {
             </a>
           </Box>
         </Box>
-        <Box display="flex" gap="1rem" justifyContent="left" width="100%" mt="1rem">
+        <Box display="flex" gap="1rem" justifyContent="left" mt="1rem">
           <StyledButton
             variant="outlined"
             onClick={() => {
@@ -101,19 +95,19 @@ export const LandingPage = () => {
       </Box>
       <Box display={"flex"} flexDirection="column" gap="1rem">
         <Box textAlign="left">
-          <Typography variant="subtitle1" color={"white"} mb="0.5rem">
+          <Typography variant="body1" color={"white"} mb="0.5rem">
             {" "}
             Albert Eda is a Software Engineer working at <span style={{ color: "#BB86FC" }}>
               OBSIDI.
             </span>{" "}
           </Typography>
-          <Typography variant="subtitle1" color={"white"}>
+          <Typography variant="body1" color={"white"}>
             With over a year of experience, he has been instrumental in delivering impactful updates and
             innovative features to the Obsidi platform, empowering professionals around the globe.
           </Typography>
         </Box>
         <Box textAlign={"left"}>
-          <Typography variant="subtitle1" color={"white"}>
+          <Typography variant="body1" color={"white"}>
             Beyond coding, Albert channels his creativity through music production, film photography, and
             exploring immersive gaming experiences.
           </Typography>
