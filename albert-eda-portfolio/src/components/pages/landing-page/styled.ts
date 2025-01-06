@@ -11,8 +11,8 @@ export const StyledBox = styled(Box)`
 
 export const StyledImageWrapper = styled(Box)`
   background-color: grey;
-  width: 12rem;
-  height: 12rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -20,8 +20,8 @@ export const StyledImageWrapper = styled(Box)`
 `;
 
 export const StyledImage = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 10rem;
+  height: 10rem;
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
