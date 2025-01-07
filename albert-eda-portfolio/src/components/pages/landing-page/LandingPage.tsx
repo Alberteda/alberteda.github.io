@@ -1,4 +1,5 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Divider, Card, CardContent, Chip, Stack } from "@mui/material";
+import CancelIcon from "@mui/icons-material/Cancel";
 import { StyledImageWrapper, StyledImage, StyledSocials, StyledButton } from "./styled";
 import ProfilePicture from "./profile-pic.jpg";
 import Linkedin from "../../../assets/linkedin.svg";
@@ -9,7 +10,39 @@ import Projects from "../projects/Projects";
 import { useScreenSizes } from "../../../hooks/use-screen-sizes/useScreenSizes";
 
 export const LandingPage = () => {
+  const programmingLanguages = [
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "Java",
+    "C++",
+    "C",
+    "C#",
+    "HTML",
+    "CSS",
+    "SQL",
+    "PHP",
+    "Go",
+  ];
+
+  const frameworks = [
+    "React",
+    "React Native",
+    "Next.js",
+    "Node.js",
+    "Express.js",
+    "Tailwind CSS",
+    "Bootstrap",
+    "Material UI",
+  ];
+
+  const tools = ["Git", "GitHub", "VS Code", "Postman", "Figma", "Jira", "Confluence", "Slack"];
+
   const [showProjects, setShowProjects] = useState(false);
+  const [showProgrammingLanguages, setShowProgrammingLanguages] = useState(true);
+  const [showFrameworks, setShowFrameworks] = useState(false);
+  const [showTools, setShowTools] = useState(false);
+  const [showCancelIcon, setShowCancelIcon] = useState(true);
 
   const { isDevice } = useScreenSizes();
 
@@ -40,6 +73,83 @@ export const LandingPage = () => {
             </a>
           </Box>
         </Box>
+
+        <Card
+          variant="outlined"
+          elevation={2}
+          sx={{
+            backgroundColor: "#3a512b",
+          }}
+        >
+          <CardContent
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "1rem",
+            }}
+          >
+            <Typography variant="h6" color={"white"} textAlign={"left"}>
+              Skills
+            </Typography>
+            <Box>
+              <Stack direction="row" gap="0.5rem">
+                <Chip
+                  label="Languages"
+                  variant={showProgrammingLanguages ? "outlined" : "filled"}
+                  onClick={() => {
+                    if (showProgrammingLanguages) {
+                      setShowProgrammingLanguages(false);
+                    } else {
+                      setShowProgrammingLanguages(true);
+                      setShowCancelIcon(true);
+                    }
+                  }}
+                />
+                <Chip
+                  label="Frameworks"
+                  variant={showFrameworks ? "outlined" : "filled"}
+                  onClick={() => {
+                    if (showFrameworks) {
+                      setShowFrameworks(false);
+                    } else {
+                      setShowFrameworks(true);
+                      setShowCancelIcon(true);
+                    }
+                  }}
+                />
+                <Chip
+                  label="Tools"
+                  variant={showTools ? "outlined" : "filled"}
+                  onClick={() => {
+                    if (showTools) {
+                      setShowTools(false);
+                      setShowCancelIcon(false);
+                    } else {
+                      setShowTools(true);
+                      setShowCancelIcon(true);
+                    }
+                  }}
+                />
+                {showCancelIcon && (
+                  <Box
+                    display="flex"
+                    alignItems="center"
+                    onClick={() => {
+                      setShowProgrammingLanguages(false);
+                      setShowFrameworks(false);
+                      setShowTools(false);
+                      setShowCancelIcon(false);
+                    }}
+                  >
+                    <CancelIcon />
+                  </Box>
+                )}
+              </Stack>
+            </Box>
+            <Divider />
+            <Box></Box>
+          </CardContent>
+        </Card>
         <Box display="flex" gap="1rem" justifyContent="left" mt="1rem">
           <StyledButton
             variant="outlined"
