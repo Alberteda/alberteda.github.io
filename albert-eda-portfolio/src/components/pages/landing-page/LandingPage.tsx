@@ -42,9 +42,40 @@ export const LandingPage = () => {
   const [showProgrammingLanguages, setShowProgrammingLanguages] = useState(true);
   const [showFrameworks, setShowFrameworks] = useState(false);
   const [showTools, setShowTools] = useState(false);
-  const [showCancelIcon, setShowCancelIcon] = useState(true);
+  const [showCancelFilterIcon, setshowCancelFilterIcon] = useState(true);
 
+  const [skillCategories, setSkillCategories] = useState({
+    programmingLangues: true,
+    frameworks: false,
+    tools: false,
+  });
+
+  const toggleChip = (category) => {
+    const updatedCategories = {
+      ...filterCategories,
+      [category]: !filterCategories[category],
+    };
+    setFilterCategories(updatedCategories);
+    updateShowCancelFilter(updatedCategories);
+  };
+
+  const clearAllChips = () => {
+    const clearedCategories = {
+      programmingLanguage: false,
+      framework: false,
+      tools: false,
+    };
+    setFilterCategories(clearedCategories);
+    setShowCancelFilter(false); // Filter button is inactive if no chips are active
+  };
+
+  const updateShowCancelFilter = (categories) => {
+    const isAnyChipActive = Object.values(categories).some((active) => active);
+    setShowCancelFilter(isAnyChipActive);
+  };
   const { isDevice } = useScreenSizes();
+
+  const handleCancelFilter = () => {};
 
   return (
     <Box p="1rem">
@@ -95,42 +126,37 @@ export const LandingPage = () => {
               <Stack direction="row" gap="0.5rem">
                 <Chip
                   label="Languages"
-                  variant={showProgrammingLanguages ? "outlined" : "filled"}
+                  variant={skillCategories.programmingLangues ? "outlined" : "filled"}
                   onClick={() => {
-                    if (showProgrammingLanguages) {
-                      setShowProgrammingLanguages(false);
-                    } else {
-                      setShowProgrammingLanguages(true);
-                      setShowCancelIcon(true);
-                    }
+                    toggleChip("programmingLangues");
                   }}
                 />
                 <Chip
                   label="Frameworks"
-                  variant={showFrameworks ? "outlined" : "filled"}
+                  variant={skillCategories.frameworks ? "outlined" : "filled"}
                   onClick={() => {
                     if (showFrameworks) {
                       setShowFrameworks(false);
                     } else {
                       setShowFrameworks(true);
-                      setShowCancelIcon(true);
+                      setshowCancelFilterIcon(true);
                     }
                   }}
                 />
                 <Chip
                   label="Tools"
-                  variant={showTools ? "outlined" : "filled"}
+                  variant={skillCategories.tools ? "outlined" : "filled"}
                   onClick={() => {
                     if (showTools) {
                       setShowTools(false);
-                      setShowCancelIcon(false);
+                      setshowCancelFilterIcon(false);
                     } else {
                       setShowTools(true);
-                      setShowCancelIcon(true);
+                      setshowCancelFilterIcon(true);
                     }
                   }}
                 />
-                {showCancelIcon && (
+                {showCancelFilterIcon && (
                   <Box
                     display="flex"
                     alignItems="center"
@@ -138,7 +164,7 @@ export const LandingPage = () => {
                       setShowProgrammingLanguages(false);
                       setShowFrameworks(false);
                       setShowTools(false);
-                      setShowCancelIcon(false);
+                      setshowCancelFilterIcon(false);
                     }}
                   >
                     <CancelIcon />
