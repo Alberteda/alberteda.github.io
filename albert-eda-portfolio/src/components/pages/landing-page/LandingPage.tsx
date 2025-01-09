@@ -10,7 +10,14 @@ import Projects from "../projects/Projects";
 import { useScreenSizes } from "../../../hooks/use-screen-sizes/useScreenSizes";
 
 export const LandingPage = () => {
-  const programmingLanguages = [
+  const [skillCategories, setSkillCategories] = useState({
+    programmingLangues: true,
+    frameworks: true,
+    tools: true,
+  });
+
+  const [showProjects, setShowProjects] = useState(false);
+  const [showProgrammingLanguages, setShowProgrammingLanguages] = useState([
     "JavaScript",
     "TypeScript",
     "Python",
@@ -23,9 +30,8 @@ export const LandingPage = () => {
     "SQL",
     "PHP",
     "Go",
-  ];
-
-  const frameworks = [
+  ]);
+  const [showFrameworks, setShowFrameworks] = useState([
     "React",
     "React Native",
     "Next.js",
@@ -34,20 +40,17 @@ export const LandingPage = () => {
     "Tailwind CSS",
     "Bootstrap",
     "Material UI",
-  ];
-
-  const tools = ["Git", "GitHub", "VS Code", "Postman", "Figma", "Jira", "Confluence", "Slack"];
-
-  const [skillCategories, setSkillCategories] = useState({
-    programmingLangues: true,
-    frameworks: true,
-    tools: true,
-  });
-
-  const [showProjects, setShowProjects] = useState(false);
-  const [showProgrammingLanguages, setShowProgrammingLanguages] = useState(true);
-  const [showFrameworks, setShowFrameworks] = useState(false);
-  const [showTools, setShowTools] = useState(false);
+  ]);
+  const [showTools, setShowTools] = useState([
+    "Git",
+    "GitHub",
+    "VS Code",
+    "Postman",
+    "Figma",
+    "Jira",
+    "Confluence",
+    "Slack",
+  ]);
   const [showCancelFilterIcon, setshowCancelFilterIcon] = useState(true);
 
   const [languageContainer, setLanguageContainer] = useState();
@@ -177,49 +180,31 @@ export const LandingPage = () => {
             <Divider />
             <Box display={"flex"} flexDirection="column" gap="1rem">
               <Box>
-                <Chip
-                  label="Languages"
-                  variant={skillCategories.tools ? "outlined" : "filled"}
-                  onClick={() => {
-                    if (showTools) {
-                      setShowTools(false);
-                      setshowCancelFilterIcon(false);
-                    } else {
-                      setShowTools(true);
-                      setshowCancelFilterIcon(true);
-                    }
-                  }}
-                />
+                {showProgrammingLanguages && (
+                  <Stack direction="row" gap="0.5rem">
+                    {showProgrammingLanguages.map((language) => {
+                      return <Chip label={language} variant="outlined" />;
+                    })}
+                  </Stack>
+                )}
               </Box>
               <Box>
-                <Chip
-                  label="Frameworks"
-                  variant={skillCategories.tools ? "outlined" : "filled"}
-                  onClick={() => {
-                    if (showTools) {
-                      setShowTools(false);
-                      setshowCancelFilterIcon(false);
-                    } else {
-                      setShowTools(true);
-                      setshowCancelFilterIcon(true);
-                    }
-                  }}
-                />
+                {showFrameworks && (
+                  <Stack direction="row" gap="0.5rem">
+                    {showFrameworks.map((framework) => {
+                      return <Chip label={framework} variant="outlined" />;
+                    })}
+                  </Stack>
+                )}
               </Box>
               <Box>
-                <Chip
-                  label="Tools"
-                  variant={skillCategories.tools ? "outlined" : "filled"}
-                  onClick={() => {
-                    if (showTools) {
-                      setShowTools(false);
-                      setshowCancelFilterIcon(false);
-                    } else {
-                      setShowTools(true);
-                      setshowCancelFilterIcon(true);
-                    }
-                  }}
-                />
+                {showTools && (
+                  <Stack direction="row" gap="0.5rem">
+                    {showTools.map((tool) => {
+                      return <Chip label={tool} variant="outlined" />;
+                    })}
+                  </Stack>
+                )}
               </Box>
             </Box>
           </CardContent>
