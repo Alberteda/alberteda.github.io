@@ -38,17 +38,19 @@ export const LandingPage = () => {
 
   const tools = ["Git", "GitHub", "VS Code", "Postman", "Figma", "Jira", "Confluence", "Slack"];
 
+  const [skillCategories, setSkillCategories] = useState({
+    programmingLangues: true,
+    frameworks: true,
+    tools: true,
+  });
+
   const [showProjects, setShowProjects] = useState(false);
   const [showProgrammingLanguages, setShowProgrammingLanguages] = useState(true);
   const [showFrameworks, setShowFrameworks] = useState(false);
   const [showTools, setShowTools] = useState(false);
   const [showCancelFilterIcon, setshowCancelFilterIcon] = useState(true);
 
-  const [skillCategories, setSkillCategories] = useState({
-    programmingLangues: true,
-    frameworks: false,
-    tools: false,
-  });
+  const [languageContainer, setLanguageContainer] = useState();
 
   const toggleChip = (category) => {
     const updatedCategories = {
@@ -173,7 +175,53 @@ export const LandingPage = () => {
               </Stack>
             </Box>
             <Divider />
-            <Box></Box>
+            <Box display={"flex"} flexDirection="column" gap="1rem">
+              <Box>
+                <Chip
+                  label="Languages"
+                  variant={skillCategories.tools ? "outlined" : "filled"}
+                  onClick={() => {
+                    if (showTools) {
+                      setShowTools(false);
+                      setshowCancelFilterIcon(false);
+                    } else {
+                      setShowTools(true);
+                      setshowCancelFilterIcon(true);
+                    }
+                  }}
+                />
+              </Box>
+              <Box>
+                <Chip
+                  label="Frameworks"
+                  variant={skillCategories.tools ? "outlined" : "filled"}
+                  onClick={() => {
+                    if (showTools) {
+                      setShowTools(false);
+                      setshowCancelFilterIcon(false);
+                    } else {
+                      setShowTools(true);
+                      setshowCancelFilterIcon(true);
+                    }
+                  }}
+                />
+              </Box>
+              <Box>
+                <Chip
+                  label="Tools"
+                  variant={skillCategories.tools ? "outlined" : "filled"}
+                  onClick={() => {
+                    if (showTools) {
+                      setShowTools(false);
+                      setshowCancelFilterIcon(false);
+                    } else {
+                      setShowTools(true);
+                      setshowCancelFilterIcon(true);
+                    }
+                  }}
+                />
+              </Box>
+            </Box>
           </CardContent>
         </Card>
         <Box display="flex" gap="1rem" justifyContent="left" mt="1rem">
