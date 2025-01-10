@@ -55,32 +55,7 @@ export const LandingPage = () => {
 
   const [languageContainer, setLanguageContainer] = useState();
 
-  const toggleChip = (category) => {
-    const updatedCategories = {
-      ...filterCategories,
-      [category]: !filterCategories[category],
-    };
-    setFilterCategories(updatedCategories);
-    updateShowCancelFilter(updatedCategories);
-  };
-
-  const clearAllChips = () => {
-    const clearedCategories = {
-      programmingLanguage: false,
-      framework: false,
-      tools: false,
-    };
-    setFilterCategories(clearedCategories);
-    setShowCancelFilter(false); // Filter button is inactive if no chips are active
-  };
-
-  const updateShowCancelFilter = (categories) => {
-    const isAnyChipActive = Object.values(categories).some((active) => active);
-    setShowCancelFilter(isAnyChipActive);
-  };
   const { isDevice } = useScreenSizes();
-
-  const handleCancelFilter = () => {};
 
   return (
     <Box p="1rem">
@@ -110,105 +85,6 @@ export const LandingPage = () => {
           </Box>
         </Box>
 
-        <Card
-          variant="outlined"
-          elevation={2}
-          sx={{
-            backgroundColor: "#3a512b",
-          }}
-        >
-          <CardContent
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "1rem",
-            }}
-          >
-            <Typography variant="h6" color={"white"} textAlign={"left"}>
-              Skills
-            </Typography>
-            <Box>
-              <Stack direction="row" gap="0.5rem">
-                <Chip
-                  label="Languages"
-                  variant={skillCategories.programmingLangues ? "outlined" : "filled"}
-                  onClick={() => {
-                    toggleChip("programmingLangues");
-                  }}
-                />
-                <Chip
-                  label="Frameworks"
-                  variant={skillCategories.frameworks ? "outlined" : "filled"}
-                  onClick={() => {
-                    if (showFrameworks) {
-                      setShowFrameworks(false);
-                    } else {
-                      setShowFrameworks(true);
-                      setshowCancelFilterIcon(true);
-                    }
-                  }}
-                />
-                <Chip
-                  label="Tools"
-                  variant={skillCategories.tools ? "outlined" : "filled"}
-                  onClick={() => {
-                    if (showTools) {
-                      setShowTools(false);
-                      setshowCancelFilterIcon(false);
-                    } else {
-                      setShowTools(true);
-                      setshowCancelFilterIcon(true);
-                    }
-                  }}
-                />
-                {showCancelFilterIcon && (
-                  <Box
-                    display="flex"
-                    alignItems="center"
-                    onClick={() => {
-                      setShowProgrammingLanguages(false);
-                      setShowFrameworks(false);
-                      setShowTools(false);
-                      setshowCancelFilterIcon(false);
-                    }}
-                  >
-                    <CancelIcon />
-                  </Box>
-                )}
-              </Stack>
-            </Box>
-            <Divider />
-            <Box display={"flex"} flexDirection="column" gap="1rem">
-              <Box>
-                {showProgrammingLanguages && (
-                  <Stack direction="row" gap="0.5rem">
-                    {showProgrammingLanguages.map((language) => {
-                      return <Chip label={language} variant="outlined" />;
-                    })}
-                  </Stack>
-                )}
-              </Box>
-              <Box>
-                {showFrameworks && (
-                  <Stack direction="row" gap="0.5rem">
-                    {showFrameworks.map((framework) => {
-                      return <Chip label={framework} variant="outlined" />;
-                    })}
-                  </Stack>
-                )}
-              </Box>
-              <Box>
-                {showTools && (
-                  <Stack direction="row" gap="0.5rem">
-                    {showTools.map((tool) => {
-                      return <Chip label={tool} variant="outlined" />;
-                    })}
-                  </Stack>
-                )}
-              </Box>
-            </Box>
-          </CardContent>
-        </Card>
         <Box display="flex" gap="1rem" justifyContent="left" mt="1rem">
           <StyledButton
             variant="outlined"
@@ -282,6 +158,84 @@ export const LandingPage = () => {
           </Typography>
         </Box>
       </Box>
+      <Card
+        elevation={2}
+        sx={{
+          backgroundColor: "#3a512b",
+          borderRadius: "12px",
+        }}
+      >
+        <CardContent
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "1rem",
+            "&.MuiCardContent-root	": {
+              padding: "20px 20px 30px 20px !important",
+            },
+          }}
+        >
+          <Typography variant="h6" color={"white"} textAlign={"left"}>
+            Skills
+          </Typography>
+
+          <Divider />
+          <Box display={"flex"} flexDirection="column" gap="1.5rem">
+            <Box display={"flex"} flexDirection="column" gap="0.5rem">
+              <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
+                Programming Languages
+              </Typography>
+              <Box
+                overflow={"auto"}
+                sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
+              >
+                {showProgrammingLanguages && (
+                  <Stack direction="row" gap="0.5rem">
+                    {showProgrammingLanguages.map((language, index) => {
+                      return <Chip key={index} label={language} variant="outlined" />;
+                    })}
+                  </Stack>
+                )}
+              </Box>
+            </Box>
+            <Box display={"flex"} flexDirection="column" gap="0.5rem">
+              <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
+                Frameworks{" "}
+              </Typography>
+              <Box
+                overflow={"auto"}
+                sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
+              >
+                {showFrameworks && (
+                  <Stack direction="row" gap="0.5rem">
+                    {showFrameworks.map((framework, index) => {
+                      return <Chip key={index} label={framework} variant="outlined" />;
+                    })}
+                  </Stack>
+                )}
+              </Box>
+            </Box>
+            <Box display={"flex"} flexDirection="column" gap="0.5rem">
+              <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
+                Tools
+              </Typography>
+              <Box
+                overflow={"auto"}
+                sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
+              >
+                {showTools && (
+                  <Stack direction="row" gap="0.5rem">
+                    {showTools.map((tool, index) => {
+                      return <Chip key={index} label={tool} variant="outlined" />;
+                    })}
+                  </Stack>
+                )}
+              </Box>
+            </Box>
+          </Box>
+        </CardContent>
+      </Card>
+
       <Box mt="5rem">
         <Typography variant="subtitle1" color="white" fontWeight={"700"}>
           Albert Eda 2025 ©
