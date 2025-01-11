@@ -1,5 +1,4 @@
 import { Box, Typography, Divider, Card, CardContent, Chip, Stack } from "@mui/material";
-import CancelIcon from "@mui/icons-material/Cancel";
 import { StyledImageWrapper, StyledImage, StyledSocials, StyledButton } from "./styled";
 import ProfilePicture from "./profile-pic.jpg";
 import Linkedin from "../../../assets/linkedin.svg";
@@ -10,50 +9,37 @@ import Projects from "../projects/Projects";
 import { useScreenSizes } from "../../../hooks/use-screen-sizes/useScreenSizes";
 
 export const LandingPage = () => {
-  const [skillCategories, setSkillCategories] = useState({
-    programmingLangues: true,
-    frameworks: true,
-    tools: true,
-  });
-
   const [showProjects, setShowProjects] = useState(false);
-  const [showProgrammingLanguages, setShowProgrammingLanguages] = useState([
-    "JavaScript",
-    "TypeScript",
-    "Python",
-    "Java",
-    "C++",
-    "C",
-    "C#",
-    "HTML",
-    "CSS",
-    "SQL",
-    "PHP",
-    "Go",
-  ]);
-  const [showFrameworks, setShowFrameworks] = useState([
-    "React",
-    "React Native",
-    "Next.js",
-    "Node.js",
-    "Express.js",
-    "Tailwind CSS",
-    "Bootstrap",
-    "Material UI",
-  ]);
-  const [showTools, setShowTools] = useState([
-    "Git",
-    "GitHub",
-    "VS Code",
-    "Postman",
-    "Figma",
-    "Jira",
-    "Confluence",
-    "Slack",
-  ]);
-  const [showCancelFilterIcon, setshowCancelFilterIcon] = useState(true);
-
-  const [languageContainer, setLanguageContainer] = useState();
+  const skills = [
+    { skill: "language", value: "JavaScript" },
+    { skill: "language", value: "TypeScript" },
+    { skill: "language", value: "Python" },
+    { skill: "language", value: "Java" },
+    { skill: "language", value: "C++" },
+    { skill: "language", value: "C" },
+    { skill: "language", value: "C#" },
+    { skill: "language", value: "HTML" },
+    { skill: "language", value: "CSS" },
+    { skill: "language", value: "SQL" },
+    { skill: "language", value: "PHP" },
+    { skill: "language", value: "Go" },
+    { skill: "framework", value: "React" },
+    { skill: "framework", value: "React Native" },
+    { skill: "framework", value: "Next.js" },
+    { skill: "framework", value: "Node.js" },
+    { skill: "framework", value: "Express.js" },
+    { skill: "framework", value: "Tailwind CSS" },
+    { skill: "framework", value: "Bootstrap" },
+    { skill: "framework", value: "Material UI" },
+    { skill: "tool", value: "Git" },
+    { skill: "tool", value: "GitHub" },
+    { skill: "tool", value: "VS Code" },
+    { skill: "tool", value: "Postman" },
+    { skill: "tool", value: "Figma" },
+    { skill: "tool", value: "Jira" },
+    { skill: "tool", value: "Confluence" },
+    { skill: "tool", value: "Slack" },
+  ];
 
   const { isDevice } = useScreenSizes();
 
@@ -72,70 +58,71 @@ export const LandingPage = () => {
           <StyledImageWrapper>
             <StyledImage src={ProfilePicture} alt="profile-picture" />
           </StyledImageWrapper>
-          <Box display="flex" gap="1rem" justifyContent="center" alignItems={"center"}>
-            <a href="https://www.linkedin.com/in/alberteda" target="_blank" rel="noopener noreferrer">
-              <StyledSocials src={Linkedin} />
-            </a>
-            <a href="https://github.com/alberteda" target="_blank" rel="noopener noreferrer">
-              <StyledSocials src={GitHub} />
-            </a>
-            <a href="mailto:alberteda32@gmail.com" target="_blank" rel="noopener noreferrer">
-              <StyledSocials src={Mail} />
-            </a>
+          <Box>
+            <Box display="flex" gap="1rem">
+              <a href="https://www.linkedin.com/in/alberteda" target="_blank" rel="noopener noreferrer">
+                <StyledSocials src={Linkedin} />
+              </a>
+              <a href="https://github.com/alberteda" target="_blank" rel="noopener noreferrer">
+                <StyledSocials src={GitHub} />
+              </a>
+              <a href="mailto:alberteda32@gmail.com" target="_blank" rel="noopener noreferrer">
+                <StyledSocials src={Mail} />
+              </a>
+            </Box>
+            <Box display="flex" flexDirection="column" gap="1rem" mt="1rem">
+              <StyledButton
+                variant="outlined"
+                onClick={() => {
+                  setShowProjects(true);
+                }}
+                sx={{
+                  backgroundColor: "rgb(252, 211, 77)",
+                  color: "rgb(124, 45, 18)",
+                  borderColor: "rgb(124, 45, 18)",
+                  fontWeight: "bold",
+                  boxShadow: "5px 5px 0 rgb(124, 45, 18)",
+                  transition: "box-shadow 100ms ease",
+                  "&:hover": {
+                    boxShadow: "2px 2px 0 rgb(124, 45, 18)",
+                  },
+                  "&:active": {
+                    boxShadow: "0 0 0 0 rgb(124, 45, 18)",
+                    transition: "box-shadow 50ms ease",
+                  },
+                }}
+              >
+                <Typography variant="button" color="rgb(124, 45, 18)" fontWeight={"700"}>
+                  PROJECTS
+                </Typography>
+              </StyledButton>
+              <StyledButton
+                variant="outlined"
+                sx={{
+                  backgroundColor: "rgb(252, 211, 77)",
+                  color: "rgb(124, 45, 18)",
+                  borderColor: "rgb(124, 45, 18)",
+                  fontWeight: "bold",
+                  boxShadow: "5px 5px 0 rgb(124, 45, 18)",
+                  transition: "box-shadow 100ms ease",
+                  "&:hover": {
+                    boxShadow: "2px 2px 0 rgb(124, 45, 18)",
+                  },
+                  "&:active": {
+                    boxShadow: "0 0 0 0 rgb(124, 45, 18)",
+                    transition: "box-shadow 50ms ease",
+                  },
+                }}
+                onClick={() => {
+                  setShowProjects(true);
+                }}
+              >
+                <Typography variant="button" color="rgb(124, 45, 18)" fontWeight={"700"}>
+                  EXPERIENCE
+                </Typography>
+              </StyledButton>
+            </Box>
           </Box>
-        </Box>
-
-        <Box display="flex" gap="1rem" justifyContent="left" mt="1rem">
-          <StyledButton
-            variant="outlined"
-            onClick={() => {
-              setShowProjects(true);
-            }}
-            sx={{
-              backgroundColor: "rgb(252, 211, 77)",
-              color: "rgb(124, 45, 18)",
-              borderColor: "rgb(124, 45, 18)",
-              fontWeight: "bold",
-              boxShadow: "5px 5px 0 rgb(124, 45, 18)",
-              transition: "box-shadow 100ms ease",
-              "&:hover": {
-                boxShadow: "2px 2px 0 rgb(124, 45, 18)",
-              },
-              "&:active": {
-                boxShadow: "0 0 0 0 rgb(124, 45, 18)",
-                transition: "box-shadow 50ms ease",
-              },
-            }}
-          >
-            <Typography variant="button" color="rgb(124, 45, 18)" fontWeight={"700"}>
-              PROJECTS
-            </Typography>
-          </StyledButton>
-          <StyledButton
-            variant="outlined"
-            sx={{
-              backgroundColor: "rgb(252, 211, 77)",
-              color: "rgb(124, 45, 18)",
-              borderColor: "rgb(124, 45, 18)",
-              fontWeight: "bold",
-              boxShadow: "5px 5px 0 rgb(124, 45, 18)",
-              transition: "box-shadow 100ms ease",
-              "&:hover": {
-                boxShadow: "2px 2px 0 rgb(124, 45, 18)",
-              },
-              "&:active": {
-                boxShadow: "0 0 0 0 rgb(124, 45, 18)",
-                transition: "box-shadow 50ms ease",
-              },
-            }}
-            onClick={() => {
-              setShowProjects(true);
-            }}
-          >
-            <Typography variant="button" color="rgb(124, 45, 18)" fontWeight={"700"}>
-              EXPERIENCE
-            </Typography>
-          </StyledButton>
         </Box>
       </Box>
       <Box display={"flex"} flexDirection="column" gap="1rem">
@@ -158,10 +145,15 @@ export const LandingPage = () => {
           </Typography>
         </Box>
       </Box>
+      <Box mt="2rem">
+        <Typography variant="h6" color={"white"} textAlign={"left"}>
+          Skills
+        </Typography>
+      </Box>
       <Card
         elevation={2}
         sx={{
-          backgroundColor: "#3a512b",
+          backgroundColor: "#234426",
           borderRadius: "12px",
         }}
       >
@@ -175,11 +167,6 @@ export const LandingPage = () => {
             },
           }}
         >
-          <Typography variant="h6" color={"white"} textAlign={"left"}>
-            Skills
-          </Typography>
-
-          <Divider />
           <Box display={"flex"} flexDirection="column" gap="1.5rem">
             <Box display={"flex"} flexDirection="column" gap="0.5rem">
               <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
@@ -189,10 +176,10 @@ export const LandingPage = () => {
                 overflow={"auto"}
                 sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
               >
-                {showProgrammingLanguages && (
+                {skills && (
                   <Stack direction="row" gap="0.5rem">
-                    {showProgrammingLanguages.map((language, index) => {
-                      return <Chip key={index} label={language} variant="outlined" />;
+                    {skills.map(({ skill, value }, index) => {
+                      return skill === "language" && <Chip key={index} label={value} variant="outlined" />;
                     })}
                   </Stack>
                 )}
@@ -206,10 +193,10 @@ export const LandingPage = () => {
                 overflow={"auto"}
                 sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
               >
-                {showFrameworks && (
+                {skills && (
                   <Stack direction="row" gap="0.5rem">
-                    {showFrameworks.map((framework, index) => {
-                      return <Chip key={index} label={framework} variant="outlined" />;
+                    {skills.map(({ skill, value }, index) => {
+                      return skill === "framework" && <Chip key={index} label={value} variant="outlined" />;
                     })}
                   </Stack>
                 )}
@@ -223,10 +210,10 @@ export const LandingPage = () => {
                 overflow={"auto"}
                 sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
               >
-                {showTools && (
+                {skills && (
                   <Stack direction="row" gap="0.5rem">
-                    {showTools.map((tool, index) => {
-                      return <Chip key={index} label={tool} variant="outlined" />;
+                    {skills.map(({ skill, value }, index) => {
+                      return skill === "tool" && <Chip key={index} label={value} variant="outlined" />;
                     })}
                   </Stack>
                 )}
