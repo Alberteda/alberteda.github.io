@@ -128,103 +128,117 @@ export const LandingPage = () => {
       <Box display={"flex"} flexDirection="column" gap="1rem">
         <Box textAlign="left">
           <Typography variant="body1" color={"white"} mb="0.5rem">
-            {" "}
-            Albert Eda is a Software Engineer working at <span style={{ color: "#BB86FC" }}>
-              OBSIDI.
-            </span>{" "}
-          </Typography>
-          <Typography variant="body1" color={"white"}>
-            With over a year of experience, he has been instrumental in delivering impactful updates and
-            innovative features to the Obsidi platform, empowering professionals around the globe.
-          </Typography>
-        </Box>
-        <Box textAlign={"left"}>
-          <Typography variant="body1" color={"white"}>
-            Beyond coding, Albert channels his creativity through music production, film photography, and
-            exploring immersive gaming experiences.
+            Albert Eda is a Software Engineer at <span style={{ color: "#BB86FC" }}>OBSIDI</span>, where he
+            has played a pivotal role in enhancing the platform's capabilities over the past three years. His
+            contributions have driven impactful full-stack updates and introduced innovative features to
+            OBSIDI — a global leader in professional networking and empowerment.
+            <br />
+            <br /> Beyond engineering, Albert expresses his creativity through music production, film
+            photography, and immersive gaming experiences.
           </Typography>
         </Box>
       </Box>
-      <Box mt="2rem">
+
+      <Box m="2rem 0 1rem 0">
         <Typography variant="h6" color={"white"} textAlign={"left"}>
           Skills
         </Typography>
       </Box>
-      <Card
-        elevation={2}
+
+      <CardContent
         sx={{
-          backgroundColor: "#234426",
-          borderRadius: "12px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
+          "&.MuiCardContent-root	": {
+            padding: "0 !important",
+          },
         }}
       >
-        <CardContent
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "1rem",
-            "&.MuiCardContent-root	": {
-              padding: "20px 20px 30px 20px !important",
-            },
-          }}
-        >
-          <Box display={"flex"} flexDirection="column" gap="1.5rem">
-            <Box display={"flex"} flexDirection="column" gap="0.5rem">
-              <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
-                Programming Languages
-              </Typography>
-              <Box
-                overflow={"auto"}
-                sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
-              >
-                {skills && (
-                  <Stack direction="row" gap="0.5rem">
-                    {skills.map(({ skill, value }, index) => {
-                      return skill === "language" && <Chip key={index} label={value} variant="outlined" />;
-                    })}
-                  </Stack>
-                )}
-              </Box>
-            </Box>
-            <Box display={"flex"} flexDirection="column" gap="0.5rem">
-              <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
-                Frameworks{" "}
-              </Typography>
-              <Box
-                overflow={"auto"}
-                sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
-              >
-                {skills && (
-                  <Stack direction="row" gap="0.5rem">
-                    {skills.map(({ skill, value }, index) => {
-                      return skill === "framework" && <Chip key={index} label={value} variant="outlined" />;
-                    })}
-                  </Stack>
-                )}
-              </Box>
-            </Box>
-            <Box display={"flex"} flexDirection="column" gap="0.5rem">
-              <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
-                Tools
-              </Typography>
-              <Box
-                overflow={"auto"}
-                sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
-              >
-                {skills && (
-                  <Stack direction="row" gap="0.5rem">
-                    {skills.map(({ skill, value }, index) => {
-                      return skill === "tool" && <Chip key={index} label={value} variant="outlined" />;
-                    })}
-                  </Stack>
-                )}
-              </Box>
+        <Box display={"flex"} flexDirection="column" gap="1.5rem">
+          <Box display={"flex"} flexDirection="column" gap="1rem">
+            <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
+              Programming Languages
+            </Typography>
+            <Box
+              overflow={"auto"}
+              sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
+            >
+              {skills && (
+                <Stack direction="row" gap="0.5rem">
+                  {skills.map(({ skill, value }, index) => {
+                    return (
+                      skill === "language" && (
+                        <Chip
+                          key={index}
+                          label={value}
+                          variant="outlined"
+                          sx={{ backgroundColor: "#4B8063", color: "white", fontWeight: "700" }}
+                        />
+                      )
+                    );
+                  })}
+                </Stack>
+              )}
             </Box>
           </Box>
-        </CardContent>
-      </Card>
+          <Box display={"flex"} flexDirection="column" gap="1rem">
+            <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
+              Frameworks{" "}
+            </Typography>
+            <Box
+              overflow={"auto"}
+              sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
+            >
+              {skills && (
+                <Stack direction="row" gap="0.5rem">
+                  {skills.map(({ skill, value }, index) => {
+                    return (
+                      skill === "framework" && (
+                        <Chip
+                          key={index}
+                          label={value}
+                          variant="outlined"
+                          sx={{ backgroundColor: "#4B8063", color: "white", fontWeight: "700" }}
+                        />
+                      )
+                    );
+                  })}
+                </Stack>
+              )}
+            </Box>
+          </Box>
+          <Box display={"flex"} flexDirection="column" gap="1rem">
+            <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
+              Tools
+            </Typography>
+            <Box
+              overflow={"auto"}
+              sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
+            >
+              {skills && (
+                <Stack direction="row" gap="0.5rem">
+                  {skills.map(({ skill, value }, index) => {
+                    return (
+                      skill === "tool" && (
+                        <Chip
+                          key={index}
+                          label={value}
+                          variant="outlined"
+                          sx={{ backgroundColor: "#4B8063", color: "white", fontWeight: "700" }}
+                        />
+                      )
+                    );
+                  })}
+                </Stack>
+              )}
+            </Box>
+          </Box>
+        </Box>
+      </CardContent>
 
-      <Box mt="5rem">
-        <Typography variant="subtitle1" color="white" fontWeight={"700"}>
+      <Box mt="1rem">
+        <Typography variant="caption" color="white" fontWeight={"700"}>
           Albert Eda 2025 ©
         </Typography>
       </Box>
