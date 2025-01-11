@@ -64,7 +64,7 @@ export const theme = createTheme({
         subtitle2: {
           color: "var(--color)",
           fontSize: "1.125rem",
-          fontWeight: 700,
+          fontWeight: 400,
           lineHeight: "1.25rem",
         },
         body1: {
