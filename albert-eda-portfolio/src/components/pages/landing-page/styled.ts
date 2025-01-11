@@ -53,7 +53,6 @@ export const StyledButton = styled(Button)`
   padding: 0.5rem 1rem;
 
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
