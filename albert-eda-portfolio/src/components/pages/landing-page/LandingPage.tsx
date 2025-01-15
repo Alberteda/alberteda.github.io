@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Box, Typography, CardContent, Chip, Stack } from "@mui/material";
 import { StyledImageWrapper, StyledImage, StyledSocials, StyledButton } from "./styled";
 import ProfilePicture from "./profile-pic.jpg";
@@ -45,6 +46,8 @@ export const LandingPage = () => {
 
   const { isDevice } = useScreenSizes();
 
+  const navigate = useNavigate();
+
   return (
     <Box p="1rem">
       <Box display="flex" flexDirection="column" mb="3rem" gap="2rem">
@@ -72,11 +75,11 @@ export const LandingPage = () => {
                 <StyledSocials src={Mail} />
               </a>
             </Box>
-            <Box display="flex" flexDirection="column" gap="1rem" mt="1rem">
+            <Box display="flex" flexDirection="column" mt="1rem">
               <StyledButton
                 variant="outlined"
                 onClick={() => {
-                  setShowProjects(true);
+                  navigate("/experience");
                 }}
                 sx={{
                   backgroundColor: "rgb(252, 211, 77)",
@@ -96,31 +99,6 @@ export const LandingPage = () => {
               >
                 <Typography variant="button" color="rgb(124, 45, 18)" fontWeight={"700"}>
                   PROJECTS
-                </Typography>
-              </StyledButton>
-              <StyledButton
-                variant="outlined"
-                sx={{
-                  backgroundColor: "rgb(252, 211, 77)",
-                  color: "rgb(124, 45, 18)",
-                  borderColor: "rgb(124, 45, 18)",
-                  fontWeight: "bold",
-                  boxShadow: "5px 5px 0 rgb(124, 45, 18)",
-                  transition: "box-shadow 100ms ease",
-                  "&:hover": {
-                    boxShadow: "2px 2px 0 rgb(124, 45, 18)",
-                  },
-                  "&:active": {
-                    boxShadow: "0 0 0 0 rgb(124, 45, 18)",
-                    transition: "box-shadow 50ms ease",
-                  },
-                }}
-                onClick={() => {
-                  setShowProjects(true);
-                }}
-              >
-                <Typography variant="button" color="rgb(124, 45, 18)" fontWeight={"700"}>
-                  EXPERIENCE
                 </Typography>
               </StyledButton>
             </Box>
