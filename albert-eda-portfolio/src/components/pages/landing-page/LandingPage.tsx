@@ -1,4 +1,4 @@
-import { Box, Typography, Divider, Card, CardContent, Chip, Stack } from "@mui/material";
+import { Box, Typography, CardContent, Chip, Stack } from "@mui/material";
 import { StyledImageWrapper, StyledImage, StyledSocials, StyledButton } from "./styled";
 import ProfilePicture from "./profile-pic.jpg";
 import Linkedin from "../../../assets/linkedin.svg";
@@ -33,6 +33,8 @@ export const LandingPage = () => {
     { skill: "framework", value: "Material UI" },
     { skill: "tool", value: "Git" },
     { skill: "tool", value: "GitHub" },
+    { skill: "tool", value: "Google Console" },
+    { skill: "tool", value: "Apple Developer" },
     { skill: "tool", value: "VS Code" },
     { skill: "tool", value: "Postman" },
     { skill: "tool", value: "Figma" },
