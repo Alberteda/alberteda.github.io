@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Box, Typography, CardContent, Chip, Stack } from "@mui/material";
+import { Box, Typography, CardContent, Chip, Stack, Container } from "@mui/material";
 import { StyledImageWrapper, StyledImage, StyledSocials, StyledButton } from "./styled";
 import ProfilePicture from "./profile-pic.jpg";
 import Linkedin from "../../../assets/linkedin.svg";
@@ -49,7 +49,12 @@ export const LandingPage = () => {
   const navigate = useNavigate();
 
   return (
-    <Box p="1rem">
+    <Container
+      sx={{
+        paddingTop: "1rem",
+        paddingBottom: "2rem",
+      }}
+    >
       <Box display="flex" flexDirection="column" mb="3rem" gap="2rem">
         <Box textAlign={"left"}>
           <Typography variant={isDevice ? "h4" : "h2"} fontWeight={"700"} color={"white"}>
@@ -223,7 +228,7 @@ export const LandingPage = () => {
         </Typography>
       </Box>
       <Projects visible={showProjects} setVisible={setShowProjects} />
-    </Box>
+    </Container>
   );
 };
 
