@@ -5,12 +5,9 @@ import ProfilePicture from "./profile-pic.jpg";
 import Linkedin from "../../../assets/linkedin.svg";
 import GitHub from "../../../assets/github.svg";
 import Mail from "../../../assets/mail.svg";
-import { useState } from "react";
-import Projects from "../projects/Projects";
 import { useScreenSizes } from "../../../hooks/use-screen-sizes/useScreenSizes";
 
 export const LandingPage = () => {
-  const [showProjects, setShowProjects] = useState(false);
   const skills = [
     { skill: "language", value: "JavaScript" },
     { skill: "language", value: "TypeScript" },
@@ -227,7 +224,6 @@ export const LandingPage = () => {
           Albert Eda 2025 ©
         </Typography>
       </Box>
-      <Projects visible={showProjects} setVisible={setShowProjects} />
     </Container>
   );
 };
