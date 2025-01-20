@@ -44,10 +44,7 @@ interface ProjectsProps {
   setVisible: (value: boolean | ((prevValue: boolean) => boolean)) => void; // accepts a setState function
 }
 
-export const Projects: FunctionComponent<ProjectsProps> = ({
-  visible,
-  setVisible,
-}) => {
+export const Project: FunctionComponent<ProjectsProps> = ({ visible, setVisible }) => {
   return (
     <StyledDialog
       open={visible}
@@ -60,7 +57,8 @@ export const Projects: FunctionComponent<ProjectsProps> = ({
         justifyContent: "center",
         alignItems: "center",
       }}
-      fullWidth>
+      fullWidth
+    >
       <Box bgcolor="#232526" padding="2rem">
         <Box mb="2rem">
           <Typography variant="h5" color="white" fontWeight="bolder">
@@ -76,35 +74,22 @@ export const Projects: FunctionComponent<ProjectsProps> = ({
                 maxWidth: "30rem",
                 paddingBottom: "1rem",
                 boxShadow: "2px 2px 5px #BB86FC",
-              }}>
+              }}
+            >
               <CardHeader
-                avatar={
-                  <Avatar
-                    src={OBSIDI}
-                    sx={{ width: "8rem", height: "auto", borderRadius: "0" }}
-                  />
-                }
+                avatar={<Avatar src={OBSIDI} sx={{ width: "8rem", height: "auto", borderRadius: "0" }} />}
               />
               <CardContent>
                 <Typography color="white" variant="body1" fontWeight="bold">
-                  An employment-focused, multi-sided marketplace that enables
-                  access to networking and future job opportunities Black
-                  professionals globally.
+                  An employment-focused, multi-sided marketplace that enables access to networking and future
+                  job opportunities Black professionals globally.
                 </Typography>
-                <Typography
-                  color="white"
-                  variant="body2"
-                  mt="1rem"
-                  letterSpacing="2px">
+                <Typography color="white" variant="body2" mt="1rem" letterSpacing="2px">
                   React, Typescript, Node JS, PostgreSQL, Postman, Dockers
                 </Typography>
               </CardContent>
-              <CardActions
-                sx={{ display: "flex", gap: "1rem", paddingLeft: "1rem" }}>
-                <a
-                  href="https://github.com/albert-eda-bptn"
-                  target="_blank"
-                  rel="noopener noreferrer">
+              <CardActions sx={{ display: "flex", gap: "1rem", paddingLeft: "1rem" }}>
+                <a href="https://github.com/albert-eda-bptn" target="_blank" rel="noopener noreferrer">
                   <StyledSocials src={GitHub} />
                 </a>
                 <Button
@@ -112,7 +97,8 @@ export const Projects: FunctionComponent<ProjectsProps> = ({
                   href="https://app.obsidi.com/"
                   target="_blank"
                   rel="noopener noreferrer" // security: protects the processing of opening a new tab, disabling the windows opener and referer properties
-                  style={{ fontWeight: "bold", color: "white" }}>
+                  style={{ fontWeight: "bold", color: "white" }}
+                >
                   Learn More
                 </Button>
               </CardActions>
@@ -124,4 +110,4 @@ export const Projects: FunctionComponent<ProjectsProps> = ({
   );
 };
 
-export default Projects;
+export default Project;
