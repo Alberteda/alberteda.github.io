@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/experience" element={<ProjectPage />} />
-          <Route path="/project" element={<Projects />} />
+          <Route path="/project/:project" element={<Projects />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
