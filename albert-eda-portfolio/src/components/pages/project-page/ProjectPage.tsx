@@ -28,7 +28,14 @@ const ProjectPage = () => {
       <Box display="flex" gap={"1.5rem"} flexDirection={"column"} alignItems={"center"} mt="2rem">
         {projects.map((project) => {
           return (
-            <Box key={project.id} display="flex" width={"100%"} alignItems={"center"} gap={"1rem"}>
+            <Box
+              key={project.id}
+              display="flex"
+              width={"100%"}
+              alignItems={"center"}
+              gap={"1rem"}
+              onClick={() => navigate(`/project/${project.projectName}`)}
+            >
               <Box>
                 <Typography
                   fontWeight={"bold"}
