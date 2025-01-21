@@ -8,7 +8,7 @@ const ProjectPage = () => {
   const navigate = useNavigate();
 
   return (
-    <Container sx={{ display: "grid", gap: "1rem", paddingTop: "1rem", paddingBottom: "2rem" }}>
+    <Container sx={{ display: "grid", gap: "1rem", paddingTop: "2rem", paddingBottom: "2rem" }}>
       <Box display="flex" alignItems={"center"}>
         <Box onClick={() => navigate("/")}>
           <KeyboardBackspace sx={{ color: "white" }} />
@@ -21,7 +21,7 @@ const ProjectPage = () => {
       </Box>
       <Box textAlign={"left"}>
         <Typography variant="body1" color={"white"}>
-          A showcase of projects I've contributed to over the years — a blend of personal passion and
+          A showcase of some projects I've contributed to over the years — a blend of personal passion and
           professional experience.
         </Typography>
       </Box>
