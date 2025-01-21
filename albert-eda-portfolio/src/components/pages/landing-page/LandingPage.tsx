@@ -1,46 +1,14 @@
+import { Box, Typography, Container } from "@mui/material";
+import Skills from "../../skills/skills";
+import { useScreenSizes } from "../../../hooks/use-screen-sizes/useScreenSizes";
 import { useNavigate } from "react-router-dom";
-import { Box, Typography, CardContent, Chip, Stack, Container } from "@mui/material";
 import { StyledImageWrapper, StyledImage, StyledSocials, StyledButton } from "./styled";
 import ProfilePicture from "./profile-pic.jpg";
 import Linkedin from "../../../assets/linkedin.svg";
 import GitHub from "../../../assets/github.svg";
 import Mail from "../../../assets/mail.svg";
-import { useScreenSizes } from "../../../hooks/use-screen-sizes/useScreenSizes";
 
 export const LandingPage = () => {
-  const skills = [
-    { skill: "language", value: "JavaScript" },
-    { skill: "language", value: "TypeScript" },
-    { skill: "language", value: "Python" },
-    { skill: "language", value: "Java" },
-    { skill: "language", value: "C++" },
-    { skill: "language", value: "C" },
-    { skill: "language", value: "C#" },
-    { skill: "language", value: "HTML" },
-    { skill: "language", value: "CSS" },
-    { skill: "language", value: "SQL" },
-    { skill: "language", value: "PHP" },
-    { skill: "language", value: "Go" },
-    { skill: "framework", value: "React" },
-    { skill: "framework", value: "React Native" },
-    { skill: "framework", value: "Next.js" },
-    { skill: "framework", value: "Node.js" },
-    { skill: "framework", value: "Express.js" },
-    { skill: "framework", value: "Tailwind CSS" },
-    { skill: "framework", value: "Bootstrap" },
-    { skill: "framework", value: "Material UI" },
-    { skill: "tool", value: "Git" },
-    { skill: "tool", value: "GitHub" },
-    { skill: "tool", value: "Google Console" },
-    { skill: "tool", value: "Apple Developer" },
-    { skill: "tool", value: "VS Code" },
-    { skill: "tool", value: "Postman" },
-    { skill: "tool", value: "Figma" },
-    { skill: "tool", value: "Jira" },
-    { skill: "tool", value: "Confluence" },
-    { skill: "tool", value: "Slack" },
-  ];
-
   const { isDevice } = useScreenSizes();
 
   const navigate = useNavigate();
@@ -126,99 +94,7 @@ export const LandingPage = () => {
           Skills
         </Typography>
       </Box>
-
-      <CardContent
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "1rem",
-          "&.MuiCardContent-root	": {
-            padding: "0 !important",
-          },
-        }}
-      >
-        <Box display={"flex"} flexDirection="column" gap="1.5rem">
-          <Box display={"flex"} flexDirection="column" gap="1rem">
-            <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
-              Programming Languages
-            </Typography>
-            <Box
-              overflow={"auto"}
-              sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
-            >
-              {skills && (
-                <Stack direction="row" gap="0.5rem">
-                  {skills.map(({ skill, value }, index) => {
-                    return (
-                      skill === "language" && (
-                        <Chip
-                          key={index}
-                          label={value}
-                          variant="outlined"
-                          sx={{ backgroundColor: "#4B8063", color: "white", fontWeight: "700" }}
-                        />
-                      )
-                    );
-                  })}
-                </Stack>
-              )}
-            </Box>
-          </Box>
-          <Box display={"flex"} flexDirection="column" gap="1rem">
-            <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
-              Frameworks{" "}
-            </Typography>
-            <Box
-              overflow={"auto"}
-              sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
-            >
-              {skills && (
-                <Stack direction="row" gap="0.5rem">
-                  {skills.map(({ skill, value }, index) => {
-                    return (
-                      skill === "framework" && (
-                        <Chip
-                          key={index}
-                          label={value}
-                          variant="outlined"
-                          sx={{ backgroundColor: "#4B8063", color: "white", fontWeight: "700" }}
-                        />
-                      )
-                    );
-                  })}
-                </Stack>
-              )}
-            </Box>
-          </Box>
-          <Box display={"flex"} flexDirection="column" gap="1rem">
-            <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
-              Tools
-            </Typography>
-            <Box
-              overflow={"auto"}
-              sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}
-            >
-              {skills && (
-                <Stack direction="row" gap="0.5rem">
-                  {skills.map(({ skill, value }, index) => {
-                    return (
-                      skill === "tool" && (
-                        <Chip
-                          key={index}
-                          label={value}
-                          variant="outlined"
-                          sx={{ backgroundColor: "#4B8063", color: "white", fontWeight: "700" }}
-                        />
-                      )
-                    );
-                  })}
-                </Stack>
-              )}
-            </Box>
-          </Box>
-        </Box>
-      </CardContent>
-
+      <Skills />
       <Box mt="1rem">
         <Typography variant="caption" color="white" fontWeight={"700"}>
           Albert Eda 2025 ©
