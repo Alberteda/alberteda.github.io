@@ -48,7 +48,7 @@ export const LandingPage = () => {
   return (
     <Container
       sx={{
-        paddingTop: "1rem",
+        paddingTop: "2rem",
         paddingBottom: "2rem",
       }}
     >
