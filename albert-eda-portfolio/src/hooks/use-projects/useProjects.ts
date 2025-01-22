@@ -5,8 +5,8 @@ const projects = [
     Role: `Full-stack Mobile & Web Developer`,
     Team: `Team of 5`,
     location: "Toronto, Ontario, Canada",
-    technology: ` TypeScript, React, React Native, Tailwind, NativeWind UI, PostgreSQL, Node.js, Knex.js, REST APIs, 
-Postman, Postico, Docker, AWS, GitHub, GitHub Actions, Figma, Asana
+    technology: ` "TypeScript", "React", "React Native", "Tailwind", "NativeWind UI", "PostgreSQL", "Node.js", "Knex.js", "REST APIs", 
+"Postman", "Postico", "Docker", "AWS", "GitHub", "GitHub Actions", "Figma", "Asana"
 `,
     projectDescription:
       "Obsidi® is a job board built for Black tech professionals to connect with employers of choice",
@@ -19,8 +19,8 @@ Postman, Postico, Docker, AWS, GitHub, GitHub Actions, Figma, Asana
     Role: `Full-stack Mobile & Web Developer`,
     Team: `Team of 2`,
     location: "Herrogate, North Yorkshire, UK",
-    technology: ` TypeScript, React, React Native, Tailwind, NativeWind UI, PostgreSQL, Node.js, Knex.js, REST APIs, 
-Postman, Postico, Docker, AWS, GitHub, GitHub Actions, Figma, Asana
+    technology: ` "TypeScript", "React", "React Native", "Tailwind", "NativeWind UI", "PostgreSQL", "Node.js", "Knex.js", "REST APIs", 
+"Postman", "Postico", "Docker", "AWS", "GitHub", "GitHub Actions", "Figma", "Asana"
 `,
     projectDescription:
       "Ichota is a dating app designed for busy professionals, helping them connect and build meaningful relationships despite their demanding schedules and limited time to socialize.",
@@ -33,7 +33,7 @@ Postman, Postico, Docker, AWS, GitHub, GitHub Actions, Figma, Asana
     Role: `Developer, Designer & Researcher`,
     Team: `Solo Project`,
     location: "Ottawa, Ontario, Canada",
-    technology: `TypeScript, React, Vite, Material UI, Email JS, Netlify, Cloudfare, GitHub, Figma, Asana`,
+    technology: `"TypeScript", "React", "Vite", "Material UI", "Email JS", "Netlify", "Cloudfare", "GitHub", "Figma", "Asana"`,
     projectDescription:
       "San Bruno Group specializes in premium window and glass solutions, offering expert sales, installation, and service for residential and commercial projects.",
     projectLink: "https://sanbrunogroup.ca/",
@@ -45,7 +45,7 @@ Postman, Postico, Docker, AWS, GitHub, GitHub Actions, Figma, Asana
     Role: `Developer, Designer & Researcher`,
     Team: `Solo Project`,
     location: "Ottawa, Ontario, Canada",
-    technology: `TypeScript, React, React Native, Material UI, OpenTable, Square, GitHub, GitHub Actions, Netlify, Cloudfare, Figma, Asana`,
+    technology: `"TypeScript", "React", "React Native", "Material UI", "OpenTable", "Square", "GitHub", "GitHub Actions", "Netlify", "Cloudfare", "Figma", "Asana"`,
     projectDescription:
       "Located in the heart of Ottawa's Little Italy, DreamLand Cafe offers incredible fresh pasta dishes, made with love and finesse.",
     projectLink: "https://dreamlandcafe.ca/",
