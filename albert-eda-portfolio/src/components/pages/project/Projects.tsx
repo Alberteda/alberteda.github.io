@@ -1,21 +1,21 @@
-import {
-  Box,
-  Typography,
-  Container,
-  Button,
-  Card,
-  CardHeader,
-  Avatar,
-  CardContent,
-  CardActions,
-  Divider,
-} from "@mui/material";
-import { FunctionComponent } from "react";
-import OBSIDI from "../../../assets/obsidi_logo_white.png";
-import GitHub from "../../../assets/github.svg";
-import styled from "styled-components";
+import { Box, Typography, Container } from "@mui/material";
+import projects from "../../../hooks/use-projects/useProjects";
+import { KeyboardBackspace } from "@mui/icons-material";
+import { useNavigate, useParams } from "react-router-dom";
+import { useSkills } from "../../../hooks/use-skills/useSkills";
+import Skills from "../../skills/skills";
 
 const Projects = () => {
+  const navigate = useNavigate();
+  const { projectName } = useParams();
+  const { getProjectSkillsByValue } = useSkills();
+
+  const project = projects.find((project) => project.projectName === projectName);
+
+  const projectTechnology = [project.technology];
+
+  const filteredSkills = getProjectSkillsByValue(project?.technology);
+
   return (
     <Container
       sx={{
@@ -23,14 +23,22 @@ const Projects = () => {
         display: "flex",
         flexDirection: "column",
         gap: "2rem",
+        paddingTop: "2rem",
+        alignItems: "middle",
       }}
     >
-      <Box display={"flex"} justifyContent={"space-around"}>
+      <Box onClick={() => navigate("/experience")}>
+        <KeyboardBackspace sx={{ color: "white" }} />
+      </Box>
+
+      <Box display={"flex"} justifyContent={"left"} gap="0.6rem" alignItems={"center"}>
         <Box>
-          <Typography>Title</Typography>
+          <Typography variant="subtitle1" fontWeight="bolder">
+            {project?.projectName}
+          </Typography>
         </Box>
         <Box>
-          <Typography>Project Date</Typography>
+          <Typography variant="overline">{project?.year}</Typography>
         </Box>
       </Box>
 
@@ -38,28 +46,36 @@ const Projects = () => {
         <Typography>Project Sanpshot</Typography>
       </Box>
 
-      <Box>
-        <Typography>Project Role</Typography>
+      <Box display="flex" flexDirection="column" gap="1rem">
+        <Box>
+          <Typography variant="body1" fontWeight="bolder">
+            Role
+          </Typography>
+        </Box>
+        <Box>
+          <Typography variant="body2">{project?.Role}</Typography>
+        </Box>
       </Box>
 
-      <Box>
-        <Typography>Project Team</Typography>
+      <Box display="flex" flexDirection="column">
+        <Typography variant="body1" fontWeight="bolder">
+          Project Team
+        </Typography>
+        <Typography variant="body1">{project?.Team}</Typography>
       </Box>
 
-      <Box>
-        <Typography>Project Context</Typography>
+      <Box display="flex" flexDirection="column">
+        <Typography variant="body1" fontWeight="bolder">
+          Project Technologies
+        </Typography>
+        <Skills skills={filteredSkills} />
       </Box>
 
-      <Box>
-        <Typography>Project Features & Mechanics</Typography>
-      </Box>
-
-      <Box>
-        <Typography>Project Technologies</Typography>
-      </Box>
-
-      <Box>
-        <Typography>Project Links</Typography>
+      <Box display="flex" flexDirection="column">
+        <Typography variant="body1" fontWeight="bolder">
+          Project Links
+        </Typography>
+        <Typography>{project?.projectLink}</Typography>
       </Box>
     </Container>
   );
