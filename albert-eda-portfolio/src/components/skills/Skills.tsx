@@ -1,10 +1,16 @@
 import React from "react";
 import { Box, CardContent, Chip, Stack, Typography } from "@mui/material";
-import { useSkills } from "../../hooks/use-skills/useSkills";
 
-const Skills = () => {
-  const { skills } = useSkills();
+interface Skill {
+  skill: string;
+  value: string;
+}
 
+interface SkillsProps {
+  skills: Skill[];
+}
+
+const Skills = ({ skills }: SkillsProps) => {
   return (
     <CardContent
       sx={{
