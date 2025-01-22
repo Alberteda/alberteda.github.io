@@ -32,7 +32,16 @@ export const useSkills = () => {
     { skill: "tool", value: "Slack" },
   ];
 
+  const getProjectSkillsByValue = (values: string[]) => {
+    const valueSet = new Set(values);
+
+    const matchedSkills = skills.filter((skillObject) => valueSet.has(skillObject?.value));
+
+    return matchedSkills;
+  };
+
   return {
     skills,
+    getProjectSkillsByValue,
   } as const;
 };
