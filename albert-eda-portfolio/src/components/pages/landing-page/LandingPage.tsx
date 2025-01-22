@@ -2,6 +2,7 @@ import { Box, Typography, Container } from "@mui/material";
 import Skills from "../../skills/skills";
 import { useScreenSizes } from "../../../hooks/use-screen-sizes/useScreenSizes";
 import { useNavigate } from "react-router-dom";
+import { useSkills } from "../../../hooks/use-skills/useSkills";
 import { StyledImageWrapper, StyledImage, StyledSocials, StyledButton } from "./styled";
 import ProfilePicture from "./profile-pic.jpg";
 import Linkedin from "../../../assets/linkedin.svg";
@@ -9,9 +10,9 @@ import GitHub from "../../../assets/github.svg";
 import Mail from "../../../assets/mail.svg";
 
 export const LandingPage = () => {
-  const { isDevice } = useScreenSizes();
-
   const navigate = useNavigate();
+  const { isDevice } = useScreenSizes();
+  const { skills } = useSkills();
 
   return (
     <Container
@@ -94,7 +95,7 @@ export const LandingPage = () => {
           Skills
         </Typography>
       </Box>
-      <Skills />
+      <Skills skills={skills} />
       <Box mt="1rem">
         <Typography variant="caption" color="white" fontWeight={"700"}>
           Albert Eda 2025 ©
