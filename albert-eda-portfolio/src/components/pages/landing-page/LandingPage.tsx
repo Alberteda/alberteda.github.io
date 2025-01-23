@@ -95,7 +95,7 @@ export const LandingPage = () => {
           Skills
         </Typography>
       </Box>
-      <Skills skills={skills} />
+      <Skills skills={skills} titleVariant="body1" fontWeight="700" />
       <Box mt="1rem">
         <Typography variant="caption" color="white" fontWeight={"700"}>
           Albert Eda 2025 ©
