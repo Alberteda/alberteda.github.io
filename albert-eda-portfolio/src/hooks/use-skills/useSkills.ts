@@ -35,7 +35,7 @@ export const useSkills = () => {
   const getProjectSkillsByValue = (values: string[]) => {
     const valueSet = new Set(values);
 
-    const matchedSkills = skills.filter((skillObject) => valueSet.has(skillObject?.value));
+    const matchedSkills = skills.filter((skillObject) => valueSet.has(skillObject.value));
 
     return matchedSkills;
   };
