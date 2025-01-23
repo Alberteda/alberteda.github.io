@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, CardContent, Chip, Stack, Typography } from "@mui/material";
+import { Box, CardContent, Chip, Stack, Typography, TypographyVariant } from "@mui/material";
 
 interface Skill {
   skill: string;
@@ -8,9 +8,11 @@ interface Skill {
 
 interface SkillsProps {
   skills: Skill[];
+  titleVariant: TypographyVariant;
+  fontWeight: string;
 }
 
-const Skills = ({ skills }: SkillsProps) => {
+const Skills = ({ skills, titleVariant, fontWeight }: SkillsProps) => {
   return (
     <CardContent
       sx={{
@@ -24,7 +26,7 @@ const Skills = ({ skills }: SkillsProps) => {
     >
       <Box display={"flex"} flexDirection="column" gap="1.5rem">
         <Box display={"flex"} flexDirection="column" gap="1rem">
-          <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
+          <Typography variant={titleVariant} color={"white"} textAlign={"left"} fontWeight={fontWeight}>
             Programming Languages
           </Typography>
           <Box overflow={"auto"} sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}>
@@ -47,7 +49,7 @@ const Skills = ({ skills }: SkillsProps) => {
           </Box>
         </Box>
         <Box display={"flex"} flexDirection="column" gap="1rem">
-          <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
+          <Typography variant={titleVariant} color={"white"} textAlign={"left"} fontWeight={fontWeight}>
             Frameworks{" "}
           </Typography>
           <Box overflow={"auto"} sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}>
@@ -70,7 +72,7 @@ const Skills = ({ skills }: SkillsProps) => {
           </Box>
         </Box>
         <Box display={"flex"} flexDirection="column" gap="1rem">
-          <Typography variant="body1" color={"white"} textAlign={"left"} fontWeight={"700"}>
+          <Typography variant={titleVariant} color={"white"} textAlign={"left"} fontWeight={fontWeight}>
             Tools
           </Typography>
           <Box overflow={"auto"} sx={{ scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } }}>
