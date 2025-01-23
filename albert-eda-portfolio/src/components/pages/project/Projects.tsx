@@ -12,9 +12,9 @@ const Projects = () => {
 
   const project = projects.find((project) => project.projectName === projectName);
 
-  const projectTechnology = [project.technology];
+  const projectTechnology = project?.technology.split(",");
 
-  const filteredSkills = getProjectSkillsByValue(project?.technology);
+  const filteredSkills = getProjectSkillsByValue(projectTechnology!);
 
   return (
     <Container
@@ -24,6 +24,7 @@ const Projects = () => {
         flexDirection: "column",
         gap: "2rem",
         paddingTop: "2rem",
+        paddingBottom: "2rem",
         alignItems: "middle",
       }}
     >
@@ -53,7 +54,7 @@ const Projects = () => {
           </Typography>
         </Box>
         <Box>
-          <Typography variant="body2">{project?.Role}</Typography>
+          <Typography variant="body2">{project?.role}</Typography>
         </Box>
       </Box>
 
@@ -61,21 +62,32 @@ const Projects = () => {
         <Typography variant="body1" fontWeight="bolder">
           Project Team
         </Typography>
-        <Typography variant="body1">{project?.Team}</Typography>
+        <Typography variant="body1">{project?.team}</Typography>
       </Box>
 
-      <Box display="flex" flexDirection="column">
+      <Box display="flex" flexDirection="column" gap="1rem">
+        <Box>
+          <Typography variant="body1" fontWeight="bolder">
+            Description
+          </Typography>
+        </Box>
+        <Box>
+          <Typography variant="body2">{project?.projectDescription}</Typography>
+        </Box>
+      </Box>
+
+      <Box display="flex" flexDirection="column" gap="1rem">
         <Typography variant="body1" fontWeight="bolder">
           Project Technologies
         </Typography>
-        <Skills skills={filteredSkills} />
+        <Skills skills={filteredSkills} titleVariant="body2" fontWeight="400" />
       </Box>
 
       <Box display="flex" flexDirection="column">
         <Typography variant="body1" fontWeight="bolder">
           Project Links
         </Typography>
-        <Typography>{project?.projectLink}</Typography>
+        <Typography variant="body2">{project?.projectLink}</Typography>
       </Box>
     </Container>
   );
