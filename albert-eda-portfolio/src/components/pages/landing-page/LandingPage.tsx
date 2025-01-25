@@ -9,6 +9,7 @@ import Linkedin from "../../../assets/linkedin.svg";
 import GitHub from "../../../assets/github.svg";
 import Mail from "../../../assets/mail.svg";
 import NextWeekIcon from "@mui/icons-material/NextWeek";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 export const LandingPage = () => {
   const navigate = useNavigate();
@@ -86,14 +87,33 @@ export const LandingPage = () => {
             fontWeight={"400"}
             letterSpacing={"0.5px"}
           >
-            I'm a senior software engineer at <span style={{ color: "#BB86FC" }}> OBSIDI</span>, specializing
-            in full-stack development with a focus on backend systems. I helped build the Obsidi Job Board
-            platform, connecting professionals with impactful career opportunities, and previously worked on
-            Epic patient care systems at the Ottawa Hospital, enhancing healthcare workflows. <br />I also
-            take on freelance projects to tackle diverse challenges in software development. Currently, I'm
-            exploring new technologies like Three.js, Rust, and AI/ML engineering. <br /> <br /> Beyond
-            coding, I channel my creativity through cooking, music production, film photography, and video
-            games, which inspire me both personally and professionally.
+            I'm a senior software engineer at{" "}
+            <a
+              href="https://obsidi.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <span style={{ color: "#BB86FC", fontWeight: "600" }}> Obsidi</span>
+              <OpenInNewIcon sx={{ fontSize: "20px", color: "#BB86FC" }} />
+            </a>
+            , specializing in full-stack development with a focus on backend systems. I helped build the
+            Obsidi Job Board platform, connecting professionals with impactful career opportunities, and
+            previously worked on <br />
+            <a
+              href="https://www.epic.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <span style={{ color: "#f90808", fontWeight: "600" }}> Epic</span>
+              <OpenInNewIcon sx={{ fontSize: "18px", color: "#f90808" }} />
+            </a>{" "}
+            patient care systems at the Ottawa Hospital, enhancing healthcare workflows. <br />
+            <br />I also take on freelance projects to tackle diverse challenges in software development.
+            Currently, I'm exploring new technologies like Three.js, Rust, and AI/ML engineering. <br />{" "}
+            <br /> Beyond coding, I channel my creativity through cooking, music production, film photography,
+            and video games, which inspire me both personally and professionally.
           </Typography>
         </Box>
       </Box>
@@ -104,8 +124,8 @@ export const LandingPage = () => {
         </Typography>
       </Box>
       <Skills skills={skills} titleVariant="body1" fontWeight="700" />
-      <Box mt="1rem">
-        <Typography variant="caption" color="white" fontWeight={"700"}>
+      <Box m="2rem 0 0.5rem 0">
+        <Typography variant="body2" color="white" fontWeight={"600"}>
           Albert Eda 2025 ©
         </Typography>
       </Box>
