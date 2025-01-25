@@ -78,18 +78,22 @@ export const LandingPage = () => {
       </Box>
       <Box display={"flex"} flexDirection="column" gap="1rem">
         <Box textAlign="left">
-          <Typography variant="subtitle2" color={"white"} mb="0.5rem" lineHeight="1.5rem">
-            I'm a senior software engineer currently working at
-            <span style={{ color: "#BB86FC" }}>OBSIDI</span>, where I specialize in full-stack development
-            with a primary focus on backend systems. At Obsidi, I contributed to building the Obsidi Job Board
-            platform, enabling professionals to connect with impactful career opportunities. Previously, I
-            worked on developing the Epic patient care systems for the Ottawa Hospital, improving healthcare
-            workflows and patient outcomes. Alongside my professional role, I occasionally take on freelance
-            projects to explore diverse challenges and opportunities in software development. I'm continually
-            expanding my expertise, currently diving into exciting technologies like Three.js, Rust, and AI/ML
-            engineering. Outside of engineering, I have a passion for cooking and enjoy expressing my
-            creativity through music production, film photography, and video games. These interests fuel my
-            curiosity and keep me inspired both in and out of the workplace.
+          <Typography
+            variant="body1"
+            color={"white"}
+            mb="0.5rem"
+            lineHeight="1.5rem"
+            fontWeight={"400"}
+            letterSpacing={"0.5px"}
+          >
+            I'm a senior software engineer at <span style={{ color: "#BB86FC" }}> OBSIDI</span>, specializing
+            in full-stack development with a focus on backend systems. I helped build the Obsidi Job Board
+            platform, connecting professionals with impactful career opportunities, and previously worked on
+            Epic patient care systems at the Ottawa Hospital, enhancing healthcare workflows. <br />I also
+            take on freelance projects to tackle diverse challenges in software development. Currently, I'm
+            exploring new technologies like Three.js, Rust, and AI/ML engineering. <br /> <br /> Beyond
+            coding, I channel my creativity through cooking, music production, film photography, and video
+            games, which inspire me both personally and professionally.
           </Typography>
         </Box>
       </Box>
