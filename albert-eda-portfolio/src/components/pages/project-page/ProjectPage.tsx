@@ -51,7 +51,9 @@ const ProjectPage = () => {
                 <Divider
                   sx={{
                     width: "100%",
-                    backgroundColor: "#E2D372",
+                    backgroundColor: "#7d6e0e",
+                    height: "2px",
+                    borderRadius: "50%",
                   }}
                 />
               </Box>
