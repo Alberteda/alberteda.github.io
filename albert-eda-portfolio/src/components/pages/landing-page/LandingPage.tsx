@@ -78,14 +78,18 @@ export const LandingPage = () => {
       </Box>
       <Box display={"flex"} flexDirection="column" gap="1rem">
         <Box textAlign="left">
-          <Typography variant="body1" color={"white"} mb="0.5rem">
-            Albert Eda is a Software Engineer at <span style={{ color: "#BB86FC" }}>OBSIDI</span>, where he
-            has played a pivotal role in enhancing the platform's capabilities over the past three years. His
-            contributions have driven impactful full-stack updates and introduced innovative features to
-            OBSIDI — a global leader in professional networking and empowerment.
-            <br />
-            <br /> Beyond engineering, Albert expresses his creativity through music production, film
-            photography, and immersive gaming experiences.
+          <Typography variant="subtitle2" color={"white"} mb="0.5rem" lineHeight="1.5rem">
+            I'm a senior software engineer currently working at
+            <span style={{ color: "#BB86FC" }}>OBSIDI</span>, where I specialize in full-stack development
+            with a primary focus on backend systems. At Obsidi, I contributed to building the Obsidi Job Board
+            platform, enabling professionals to connect with impactful career opportunities. Previously, I
+            worked on developing the Epic patient care systems for the Ottawa Hospital, improving healthcare
+            workflows and patient outcomes. Alongside my professional role, I occasionally take on freelance
+            projects to explore diverse challenges and opportunities in software development. I'm continually
+            expanding my expertise, currently diving into exciting technologies like Three.js, Rust, and AI/ML
+            engineering. Outside of engineering, I have a passion for cooking and enjoy expressing my
+            creativity through music production, film photography, and video games. These interests fuel my
+            curiosity and keep me inspired both in and out of the workplace.
           </Typography>
         </Box>
       </Box>
