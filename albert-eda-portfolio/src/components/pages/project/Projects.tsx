@@ -3,7 +3,7 @@ import projects from "../../../hooks/use-projects/useProjects";
 import { KeyboardBackspace } from "@mui/icons-material";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSkills } from "../../../hooks/use-skills/useSkills";
-import Skills from "../../skills/skills";
+import Skills from "../../skills/Skills";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -43,8 +43,22 @@ const Projects = () => {
         </Box>
       </Box>
 
-      <Box>
-        <Typography>Project Sanpshot</Typography>
+      <Box display="flex" flexDirection="column" gap="0.3rem" alignItems={"center"}>
+        <Box width={"100%"}>
+          <img
+            src={project?.imageScreenshot}
+            alt=""
+            style={{
+              width: "100%",
+              borderRadius: "8px",
+              objectFit: "cover",
+              boxShadow: "0px 3px 5px 0px rgba(0,0,0,0.75)",
+            }}
+          />
+        </Box>
+        <Box>
+          <Typography variant="overline">{project?.screenshotTitle}</Typography>
+        </Box>
       </Box>
 
       <Box display="flex" flexDirection="column" gap="1rem">

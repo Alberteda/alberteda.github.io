@@ -5,12 +5,13 @@ const projects = [
     role: `Full-stack Mobile & Web Developer`,
     team: `Team of 5`,
     location: "Toronto, Ontario, Canada",
-    technology: `TypeScript,React,React Native,Tailwind,NativeWind UI,PostgreSQL,Node.js,Knex.js,REST APIs,Postman,Postico,Docker,AWS,GitHub,GitHub Actions,Figma,Asana
-`,
+    technology: `TypeScript,React,React Native,Tailwind,NativeWind UI,PostgreSQL,Node.js,Knex.js,REST APIs,Postman,Postico,Docker,AWS,GitHub,GitHub Actions,Figma,Asana`,
     projectDescription:
-      "Obsidi® is a job board built for Black tech professionals to connect with employers of choice",
+      "Obsidi is a job board built for Black tech professionals to connect with employers of choice.",
     projectLink: "https://app.obsidi.com/",
     year: "2022 - Present",
+    imageScreenshot: "/src/assets/obsidi-screenshot.png",
+    screenshotTitle: "Obsidi Screenshot as of January 2025",
   },
   {
     id: 2,
@@ -23,6 +24,8 @@ const projects = [
       "Ichota is a dating app designed for busy professionals, helping them connect and build meaningful relationships despite their demanding schedules and limited time to socialize.",
     projectLink: "https://ichota.co.uk/",
     year: "2024 - Present",
+    imageScreenshot: "/src/assets/ichota-screenshot.png",
+    screenshotTitle: "Ichota Screenshot as of January 2025",
   },
   {
     id: 3,
@@ -35,6 +38,8 @@ const projects = [
       "San Bruno Group specializes in premium window and glass solutions, offering expert sales, installation, and service for residential and commercial projects.",
     projectLink: "https://sanbrunogroup.ca/",
     year: "2024",
+    imageScreenshot: "/src/assets/sanbruno-screenshot.png",
+    screenshotTitle: "San Bruno Group Screenshot as of January 2025",
   },
   {
     id: 4,
@@ -47,6 +52,8 @@ const projects = [
       "Located in the heart of Ottawa's Little Italy, DreamLand Cafe offers incredible fresh pasta dishes, made with love and finesse.",
     projectLink: "https://dreamlandcafe.ca/",
     year: "2024",
+    imageScreenshot: "/src/assets/dreamland-screenshot.png",
+    screenshotTitle: "Dreamland Cafe Screenshot as of 2025",
   },
 ];
 

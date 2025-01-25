@@ -4,7 +4,7 @@ import { useScreenSizes } from "../../../hooks/use-screen-sizes/useScreenSizes";
 import { useNavigate } from "react-router-dom";
 import { useSkills } from "../../../hooks/use-skills/useSkills";
 import { StyledImageWrapper, StyledImage, StyledSocials, StyledButton } from "./styled";
-import ProfilePicture from "./profile-pic.jpg";
+import ProfilePicture from "../../../assets/profile-pic.jpg";
 import Linkedin from "../../../assets/linkedin.svg";
 import GitHub from "../../../assets/github.svg";
 import Mail from "../../../assets/mail.svg";
@@ -104,7 +104,7 @@ export const LandingPage = () => {
               href="https://www.epic.com/"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", whiteSpace: "nowrap" }}
             >
               <span style={{ color: "#f90808", fontWeight: "600" }}> Epic</span>
               <OpenInNewIcon sx={{ fontSize: "18px", color: "#f90808" }} />
