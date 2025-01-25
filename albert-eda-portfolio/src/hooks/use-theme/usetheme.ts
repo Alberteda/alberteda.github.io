@@ -12,7 +12,7 @@ export const theme = createTheme({
   },
 
   typography: {
-    fontFamily: "Mulish, serif",
+    fontFamily: "'Geist', sans-serif",
   },
 
   components: {
