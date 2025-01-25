@@ -7,9 +7,9 @@
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   background: #234426;
-  font-family: "Mulish", serif;
 }
 
 body {
   margin: 0;
+  font-family: "Geist", sans-serif;
 }
