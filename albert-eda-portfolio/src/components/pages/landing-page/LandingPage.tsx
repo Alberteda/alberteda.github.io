@@ -1,5 +1,5 @@
 import { Box, Typography, Container } from "@mui/material";
-import Skills from "../../skills/skills";
+import Skills from "../../skills/Skills";
 import { useScreenSizes } from "../../../hooks/use-screen-sizes/useScreenSizes";
 import { useNavigate } from "react-router-dom";
 import { useSkills } from "../../../hooks/use-skills/useSkills";
@@ -8,6 +8,7 @@ import ProfilePicture from "./profile-pic.jpg";
 import Linkedin from "../../../assets/linkedin.svg";
 import GitHub from "../../../assets/github.svg";
 import Mail from "../../../assets/mail.svg";
+import NextWeekIcon from "@mui/icons-material/NextWeek";
 
 export const LandingPage = () => {
   const navigate = useNavigate();
@@ -48,27 +49,26 @@ export const LandingPage = () => {
             </Box>
             <Box display="flex" flexDirection="column" mt="1rem">
               <StyledButton
-                variant="outlined"
+                variant="text"
                 onClick={() => {
                   navigate("/experience");
                 }}
+                endIcon={
+                  <NextWeekIcon
+                    sx={{
+                      width: "15px",
+                    }}
+                  />
+                }
                 sx={{
-                  backgroundColor: "rgb(252, 211, 77)",
-                  color: "rgb(124, 45, 18)",
-                  borderColor: "rgb(124, 45, 18)",
-                  fontWeight: "bold",
-                  boxShadow: "5px 5px 0 rgb(124, 45, 18)",
-                  transition: "box-shadow 100ms ease",
-                  "&:hover": {
-                    boxShadow: "2px 2px 0 rgb(124, 45, 18)",
-                  },
-                  "&:active": {
-                    boxShadow: "0 0 0 0 rgb(124, 45, 18)",
-                    transition: "box-shadow 50ms ease",
+                  color: "white",
+                  "& .MuiButton-endIcon": {
+                    color: "white",
+                    marginLeft: "-1px",
                   },
                 }}
               >
-                <Typography variant="button" color="rgb(124, 45, 18)" fontWeight={"700"}>
+                <Typography variant="button" color="white" fontWeight={"700"}>
                   PROJECTS
                 </Typography>
               </StyledButton>
