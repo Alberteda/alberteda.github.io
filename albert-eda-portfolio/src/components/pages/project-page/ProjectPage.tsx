@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Container, Typography, Divider } from "@mui/material";
 import { KeyboardBackspace } from "@mui/icons-material";
