@@ -4,6 +4,7 @@ import { KeyboardBackspace } from "@mui/icons-material";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSkills } from "../../../hooks/use-skills/useSkills";
 import Skills from "../../skills/Skills";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -68,15 +69,8 @@ const Projects = () => {
           </Typography>
         </Box>
         <Box>
-          <Typography variant="body2">{project?.role}</Typography>
+          <Typography variant="body1">{project?.role}</Typography>
         </Box>
-      </Box>
-
-      <Box display="flex" flexDirection="column">
-        <Typography variant="body1" fontWeight="bolder">
-          Project Team
-        </Typography>
-        <Typography variant="body1">{project?.team}</Typography>
       </Box>
 
       <Box display="flex" flexDirection="column" gap="1rem">
@@ -86,22 +80,34 @@ const Projects = () => {
           </Typography>
         </Box>
         <Box>
-          <Typography variant="body2">{project?.projectDescription}</Typography>
+          <Typography variant="body1">{project?.projectDescription}</Typography>
         </Box>
       </Box>
 
       <Box display="flex" flexDirection="column" gap="1rem">
         <Typography variant="body1" fontWeight="bolder">
-          Project Technologies
+          Technologies
         </Typography>
         <Skills skills={filteredSkills} titleVariant="body2" fontWeight="400" />
       </Box>
 
       <Box display="flex" flexDirection="column">
         <Typography variant="body1" fontWeight="bolder">
-          Project Links
+          Link
         </Typography>
-        <Typography variant="body2">{project?.projectLink}</Typography>
+        <Box display="flex" gap="0.1rem">
+          <Typography variant="body2" fontWeight="500">
+            <a
+              href={project?.projectLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              {project?.projectName}
+            </a>
+          </Typography>
+          <OpenInNewIcon sx={{ fontSize: "20px", color: "white" }} />
+        </Box>
       </Box>
     </Container>
   );
