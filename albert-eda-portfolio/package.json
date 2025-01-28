@@ -2,12 +2,15 @@
   "name": "albert-eda-portfolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://albert-eda.github.io/albert-eda-portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -16,6 +19,7 @@
     "@mui/icons-material": "^5.14.12",
     "@mui/material": "^5.14.12",
     "@mui/styled-engine-sc": "^5.14.11",
+    "gh-pages": "^6.3.0",
     "next": "^15.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
