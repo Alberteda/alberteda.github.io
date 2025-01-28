@@ -2,7 +2,7 @@
   "name": "albert-eda-portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://albert-eda.github.io/albert-eda-portfolio",
+  "homepage": "https://alberteda.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
