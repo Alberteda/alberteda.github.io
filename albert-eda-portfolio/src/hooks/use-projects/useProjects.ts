@@ -1,3 +1,8 @@
+import obsidiScreenshot from "../../assets/obsidi-screenshot.png";
+import ichotaScreenshot from "../../assets/ichota-screenshot.png";
+import sanbrunoScreenshot from "../../assets/sanbruno-screenshot.png";
+import dreamlandScreenshot from "../../assets/dreamland-screenshot.png";
+
 const projects = [
   {
     id: 1,
@@ -10,7 +15,7 @@ const projects = [
       "Obsidi is a job board built for Black tech professionals to connect with employers of choice.",
     projectLink: "https://app.obsidi.com/",
     year: "2022 - Present",
-    imageScreenshot: "/src/assets/obsidi-screenshot.png",
+    imageScreenshot: obsidiScreenshot,
     screenshotTitle: "Obsidi Screenshot as of January 2025",
   },
   {
@@ -24,7 +29,7 @@ const projects = [
       "Ichota is a dating app designed for busy professionals, helping them connect and build meaningful relationships despite their demanding schedules and limited time to socialize.",
     projectLink: "https://ichota.co.uk/",
     year: "2024 - Present",
-    imageScreenshot: "/src/assets/ichota-screenshot.png",
+    imageScreenshot: ichotaScreenshot,
     screenshotTitle: "Ichota Screenshot as of January 2025",
   },
   {
@@ -38,7 +43,7 @@ const projects = [
       "San Bruno Group specializes in premium window and glass solutions, offering expert sales, installation, and service for residential and commercial projects.",
     projectLink: "https://sanbrunogroup.ca/",
     year: "2024",
-    imageScreenshot: "/src/assets/sanbruno-screenshot.png",
+    imageScreenshot: sanbrunoScreenshot,
     screenshotTitle: "San Bruno Group Screenshot as of January 2025",
   },
   {
@@ -52,8 +57,8 @@ const projects = [
       "Located in the heart of Ottawa's Little Italy, DreamLand Cafe offers incredible fresh pasta dishes, made with love and finesse.",
     projectLink: "https://dreamlandcafe.ca/",
     year: "2024",
-    imageScreenshot: "/src/assets/dreamland-screenshot.png",
-    screenshotTitle: "Dreamland Cafe Screenshot as of 2025",
+    imageScreenshot: dreamlandScreenshot,
+    screenshotTitle: "Dreamland Cafe Screenshot as of January 2025",
   },
 ];
 
